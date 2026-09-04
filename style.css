@@ -1,0 +1,9825 @@
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+
+body {
+
+    font-family:
+        "DM Sans",
+        "Noto Sans Bengali",
+        sans-serif;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            145deg,
+            #090408 0%,
+            #170811 45%,
+            #080308 100%
+        );
+
+    overflow: hidden;
+
+    -webkit-font-smoothing: antialiased;
+
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.background {
+
+    position: fixed;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+}
+
+
+.glow {
+
+    position: absolute;
+
+    width: 340px;
+
+    height: 340px;
+
+    border-radius: 50%;
+
+    filter: blur(110px);
+
+    opacity: .20;
+
+}
+
+
+.glow-1 {
+
+    top: -150px;
+
+    right: -130px;
+
+    background: #b21f60;
+
+}
+
+
+.glow-2 {
+
+    bottom: -150px;
+
+    left: -140px;
+
+    background: #791545;
+
+}
+
+
+.glow-3 {
+
+    top: 42%;
+
+    left: 45%;
+
+    width: 220px;
+
+    height: 220px;
+
+    background: #6e183f;
+
+    opacity: .08;
+
+}
+
+
+/* =========================================================
+   FLOATING HEARTS
+========================================================= */
+
+.floating-heart {
+
+    position: absolute;
+
+    color:
+        rgba(255, 117, 164, .15);
+
+    font-family: serif;
+
+    animation:
+        floatHeart 8s
+        infinite ease-in-out;
+
+}
+
+
+.heart-1 {
+
+    top: 12%;
+    left: 7%;
+
+    font-size: 23px;
+
+}
+
+
+.heart-2 {
+
+    top: 24%;
+    right: 9%;
+
+    font-size: 17px;
+
+    animation-delay: 2s;
+
+}
+
+
+.heart-3 {
+
+    bottom: 22%;
+    left: 8%;
+
+    font-size: 19px;
+
+    animation-delay: 4s;
+
+}
+
+
+.heart-4 {
+
+    bottom: 12%;
+    right: 10%;
+
+    font-size: 25px;
+
+    animation-delay: 1s;
+
+}
+
+
+.heart-5 {
+
+    top: 52%;
+    left: 3%;
+
+    font-size: 13px;
+
+    animation-delay: 3s;
+
+}
+
+
+.heart-6 {
+
+    top: 65%;
+    right: 4%;
+
+    font-size: 14px;
+
+    animation-delay: 5s;
+
+}
+
+
+@keyframes floatHeart {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-22px)
+            rotate(8deg);
+
+    }
+
+}
+
+
+/* =========================================================
+   APP
+========================================================= */
+
+#app {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    height: 100vh;
+
+}
+
+
+/* =========================================================
+   PAGE TRANSITION
+========================================================= */
+
+.page {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateY(25px)
+        scale(.975);
+
+    transition:
+        opacity .60s ease,
+        transform .60s ease,
+        visibility .60s ease;
+
+    overflow-y: auto;
+
+    scrollbar-width: none;
+
+}
+
+
+.page::-webkit-scrollbar {
+    display: none;
+}
+
+
+.page.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.content {
+
+    width: 100%;
+
+    max-width: 420px;
+
+    text-align: center;
+
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.eyebrow {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-bottom: 27px;
+
+    color:
+        rgba(255,255,255,.44);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+}
+
+
+.eyebrow span {
+
+    width: 22px;
+
+    height: 1px;
+
+    background:
+        rgba(255,255,255,.18);
+
+}
+
+
+/* =========================================================
+   MAIN HEART
+========================================================= */
+
+.main-heart {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 28px;
+
+}
+
+
+.heart-circle {
+
+    width: 84px;
+
+    height: 84px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 32px;
+
+    color: #ffb8d0;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.14),
+            rgba(255,255,255,.035)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.13);
+
+    box-shadow:
+
+        0 0 50px
+        rgba(213,36,108,.27),
+
+        inset 0 1px 1px
+        rgba(255,255,255,.13);
+
+    animation:
+        heartBeat 2.2s
+        infinite ease-in-out;
+
+}
+
+
+@keyframes heartBeat {
+
+    0%,
+    100% {
+
+        transform:
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            scale(1.07);
+
+    }
+
+}
+
+
+/* =========================================================
+   HEADINGS
+========================================================= */
+
+h1,
+h2 {
+
+    font-family:
+        "Playfair Display",
+        "Noto Sans Bengali",
+        serif;
+
+}
+
+
+h1 {
+
+    font-size:
+        clamp(48px, 13vw, 68px);
+
+    line-height:
+        1.02;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        -2px;
+
+    margin-bottom:
+        23px;
+
+}
+
+
+h2 {
+
+    font-size:
+        clamp(31px, 8vw, 39px);
+
+    line-height:
+        1.30;
+
+    font-weight:
+        600;
+
+    margin-bottom:
+        17px;
+
+}
+
+
+h1 span,
+h2 span {
+
+    color:
+        #f3a3c4;
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.description {
+
+    color:
+        rgba(255,255,255,.61);
+
+    font-size:
+        14px;
+
+    line-height:
+        1.85;
+
+    margin-bottom:
+        30px;
+
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.primary-btn {
+
+    width: 100%;
+
+    max-width: 320px;
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        0 8px 0 24px;
+
+    border: none;
+
+    border-radius:
+        100px;
+
+    color:
+        #270913;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #ffeaf2
+        );
+
+    font-family:
+        "DM Sans",
+        "Noto Sans Bengali",
+        sans-serif;
+
+    font-size:
+        14px;
+
+    font-weight:
+        700;
+
+    cursor:
+        pointer;
+
+    box-shadow:
+
+        0 17px 45px
+        rgba(0,0,0,.38),
+
+        0 0 25px
+        rgba(255,110,160,.08);
+
+    transition:
+        transform .28s ease,
+        box-shadow .28s ease;
+
+}
+
+
+.primary-btn:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+
+        0 23px 55px
+        rgba(0,0,0,.45),
+
+        0 0 35px
+        rgba(255,110,160,.14);
+
+}
+
+
+.primary-btn:active {
+
+    transform:
+        scale(.965);
+
+}
+
+
+.arrow {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: white;
+
+    background:
+        #68183a;
+
+    font-size: 20px;
+
+}
+
+
+/* =========================================================
+   SIGNATURE
+========================================================= */
+
+.signature {
+
+    margin-top: 27px;
+
+    color:
+        rgba(255,255,255,.29);
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.signature span {
+
+    color:
+        #e98bad;
+
+    margin-left: 5px;
+
+}
+
+
+/* =========================================================
+   QUESTION ICON
+========================================================= */
+
+.question-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin:
+        0 auto 25px;
+
+    border-radius: 50%;
+
+    color:
+        #f4aec9;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        33px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.09),
+            rgba(255,255,255,.025)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    box-shadow:
+
+        0 0 38px
+        rgba(186,37,99,.18);
+
+}
+
+
+.love-question-icon {
+
+    color:
+        #ffabc9;
+
+}
+
+
+.money-question-icon {
+
+    color:
+        #f3c56d;
+
+}
+
+
+/* =========================================================
+   MAIN OPTIONS
+========================================================= */
+
+.options {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        13px;
+
+    width:
+        100%;
+
+}
+
+
+.choice-btn {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    min-height:
+        76px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        15px;
+
+    padding:
+        10px 14px;
+
+    color:
+        white;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.075),
+            rgba(255,255,255,.035)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.11);
+
+    border-radius:
+        20px;
+
+    cursor:
+        pointer;
+
+    text-align:
+        left;
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+.choice-btn:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.01);
+
+    background:
+        rgba(255,255,255,.10);
+
+    border-color:
+        rgba(255,175,205,.30);
+
+    box-shadow:
+        0 14px 35px
+        rgba(0,0,0,.25);
+
+}
+
+
+.choice-btn:active {
+
+    transform:
+        scale(.965);
+
+}
+
+
+.choice-icon {
+
+    width:
+        52px;
+
+    height:
+        52px;
+
+    flex-shrink:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        15px;
+
+    background:
+        rgba(255,100,155,.10);
+
+    font-size:
+        23px;
+
+}
+
+
+.choice-icon.money {
+
+    background:
+        rgba(255,190,70,.09);
+
+}
+
+
+.choice-text {
+
+    flex:
+        1;
+
+}
+
+
+.choice-text strong {
+
+    font-size:
+        16px;
+
+    font-weight:
+        600;
+
+}
+
+
+.choice-arrow {
+
+    color:
+        rgba(255,255,255,.35);
+
+    font-size:
+        20px;
+
+    padding-right:
+        4px;
+
+}
+
+
+.bottom-note {
+
+    margin-top:
+        24px;
+
+    color:
+        rgba(255,255,255,.25);
+
+    font-size:
+        11px;
+
+    letter-spacing:
+        1px;
+
+}
+
+
+/* =========================================================
+   ANSWER GRID
+========================================================= */
+
+.answer-grid {
+
+    width:
+        100%;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap:
+        13px;
+
+}
+
+
+.answer-btn {
+
+    position:
+        relative;
+
+    min-height:
+        142px;
+
+    padding:
+        20px 13px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        flex-start;
+
+    justify-content:
+        flex-end;
+
+    border:
+        1px solid
+        rgba(255,255,255,.11);
+
+    border-radius:
+        20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.07),
+            rgba(255,255,255,.025)
+        );
+
+    color:
+        white;
+
+    cursor:
+        pointer;
+
+    text-align:
+        left;
+
+    overflow:
+        hidden;
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+    transition:
+        transform .30s ease,
+        border-color .30s ease,
+        background .30s ease,
+        box-shadow .30s ease;
+
+}
+
+
+.answer-btn::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        linear-gradient(
+            130deg,
+            rgba(255,100,160,.08),
+            transparent 50%
+        );
+
+    opacity:
+        0;
+
+    transition:
+        opacity .3s ease;
+
+}
+
+
+.answer-btn:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(255,155,195,.28);
+
+    background:
+        rgba(255,255,255,.09);
+
+    box-shadow:
+        0 16px 35px
+        rgba(0,0,0,.30);
+
+}
+
+
+.answer-btn:hover::before {
+
+    opacity:
+        1;
+
+}
+
+
+.answer-btn:active {
+
+    transform:
+        scale(.96);
+
+}
+
+
+.answer-number {
+
+    position:
+        absolute;
+
+    top:
+        13px;
+
+    right:
+        13px;
+
+    color:
+        rgba(255,255,255,.27);
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        1px;
+
+}
+
+
+.answer-main {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    font-size:
+        16px;
+
+    font-weight:
+        700;
+
+    line-height:
+        1.35;
+
+}
+
+
+.answer-arrow {
+
+    position:
+        absolute;
+
+    right:
+        13px;
+
+    bottom:
+        13px;
+
+    color:
+        rgba(255,255,255,.28);
+
+    font-size:
+        16px;
+
+}
+
+
+.special-choice {
+
+    border-color:
+        rgba(255,80,145,.30);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,60,130,.11),
+            rgba(255,255,255,.035)
+        );
+
+}
+
+
+.special-choice .answer-main {
+
+    color:
+        #f18caf;
+
+}
+
+
+/* =========================================================
+   MONEY PAGE
+========================================================= */
+
+.money-heading {
+
+    margin-bottom:
+        10px;
+
+}
+
+
+.money-question-text {
+
+    color:
+        rgba(255,255,255,.65);
+
+    font-size:
+        15px;
+
+    line-height:
+        1.7;
+
+    margin-bottom:
+        27px;
+
+}
+
+
+/* =========================================================
+   MEMORY CONTENT
+========================================================= */
+
+.memory-content {
+
+    max-width:
+        410px;
+
+}
+
+
+/* =========================================================
+   PREMIUM 3D MEMORY CARD
+========================================================= */
+
+.memory-card {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    padding:
+        8px;
+
+    margin:
+        0 auto 24px;
+
+    border-radius:
+        27px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.17),
+            rgba(255,255,255,.035)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.16);
+
+    box-shadow:
+
+        0 30px 75px
+        rgba(0,0,0,.46),
+
+        0 0 50px
+        rgba(255,55,120,.12),
+
+        inset 0 1px 0
+        rgba(255,255,255,.12);
+
+    backdrop-filter:
+        blur(20px);
+
+    -webkit-backdrop-filter:
+        blur(20px);
+
+    transform:
+        perspective(1100px)
+        rotateX(0deg)
+        rotateY(0deg)
+        scale(1);
+
+    transform-style:
+        preserve-3d;
+
+    transition:
+        transform .25s ease,
+        box-shadow .3s ease;
+
+    will-change:
+        transform;
+
+}
+
+
+.memory-card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        -2px;
+
+    border-radius:
+        29px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,80,145,.36),
+            transparent 35%,
+            transparent 65%,
+            rgba(160,80,255,.20)
+        );
+
+    opacity:
+        .48;
+
+    filter:
+        blur(9px);
+
+    z-index:
+        -1;
+
+}
+
+
+/* =========================================================
+   MEMORY IMAGE
+========================================================= */
+
+.memory-image-wrapper {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    aspect-ratio:
+        4 / 5;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        20px;
+
+    background:
+        #120c13;
+
+}
+
+
+.memory-image {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    display:
+        block;
+
+    object-fit:
+        cover;
+
+    object-position:
+        center;
+
+    transition:
+        transform .7s
+        cubic-bezier(.22,1,.36,1);
+
+}
+
+
+.memory-card:hover .memory-image {
+
+    transform:
+        scale(1.045);
+
+}
+
+
+/* =========================================================
+   IMAGE SHINE
+========================================================= */
+
+.memory-image-wrapper::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        linear-gradient(
+            115deg,
+            transparent 20%,
+            rgba(255,255,255,.12) 45%,
+            transparent 70%
+        );
+
+    transform:
+        translateX(-120%);
+
+    transition:
+        transform .9s ease;
+
+    pointer-events:
+        none;
+
+}
+
+
+.memory-card:hover
+.memory-image-wrapper::after {
+
+    transform:
+        translateX(120%);
+
+}
+
+
+/* =========================================================
+   MEMORY TEXT
+========================================================= */
+
+.memory-text {
+
+    margin-bottom:
+        23px;
+
+}
+
+
+.memory-text h2 {
+
+    margin-bottom:
+        10px;
+
+}
+
+
+.memory-text p {
+
+    max-width:
+        350px;
+
+    margin:
+        0 auto;
+
+    color:
+        rgba(255,255,255,.62);
+
+    font-size:
+        14px;
+
+    line-height:
+        1.8;
+
+}
+
+
+/* =========================================================
+   RESULT PAGE
+========================================================= */
+
+.result-content {
+
+    max-width:
+        410px;
+
+}
+
+
+.result-heart {
+
+    width:
+        78px;
+
+    height:
+        78px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    margin:
+        0 auto 20px;
+
+    border-radius:
+        50%;
+
+    font-size:
+        35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,80,145,.18),
+            rgba(255,255,255,.04)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.13);
+
+    box-shadow:
+
+        0 0 45px
+        rgba(255,50,120,.15);
+
+}
+
+
+.result-message {
+
+    max-width:
+        350px;
+
+    margin:
+        0 auto 28px;
+
+    color:
+        rgba(255,255,255,.65);
+
+    font-size:
+        14px;
+
+    line-height:
+        1.85;
+
+}
+
+
+/* =========================================================
+   BIRTHDAY PAGE
+========================================================= */
+
+.birthday-content {
+
+    max-width:
+        430px;
+
+    padding-bottom:
+        35px;
+
+}
+
+
+.birthday-heart {
+
+    width:
+        72px;
+
+    height:
+        72px;
+
+    margin:
+        5px auto 14px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        50%;
+
+    font-size:
+        33px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,75,135,.19),
+            rgba(255,255,255,.04)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.14);
+
+    box-shadow:
+
+        0 15px 40px
+        rgba(0,0,0,.30),
+
+        0 0 35px
+        rgba(255,50,120,.15);
+
+}
+
+
+.birthday-title {
+
+    margin-bottom:
+        9px;
+
+}
+
+
+.birthday-subtitle {
+
+    color:
+        rgba(255,255,255,.65);
+
+    font-size:
+        14px;
+
+    margin-bottom:
+        23px;
+
+}
+
+
+/* =========================================================
+   PREMIUM VIDEO CARD
+========================================================= */
+
+.birthday-video-card {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    padding:
+        8px;
+
+    margin:
+        0 auto 22px;
+
+    border-radius:
+        27px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.17),
+            rgba(255,255,255,.035)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.16);
+
+    box-shadow:
+
+        0 30px 75px
+        rgba(0,0,0,.48),
+
+        0 0 50px
+        rgba(255,55,120,.14),
+
+        inset 0 1px 0
+        rgba(255,255,255,.13);
+
+    backdrop-filter:
+        blur(22px);
+
+    -webkit-backdrop-filter:
+        blur(22px);
+
+    transform:
+        perspective(1200px)
+        rotateX(0deg)
+        rotateY(0deg)
+        scale(1);
+
+    transform-style:
+        preserve-3d;
+
+    transition:
+        transform .25s ease,
+        box-shadow .35s ease;
+
+    will-change:
+        transform;
+
+}
+
+
+.birthday-video-card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        -2px;
+
+    border-radius:
+        29px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,80,145,.38),
+            transparent 35%,
+            transparent 65%,
+            rgba(165,80,255,.22)
+        );
+
+    opacity:
+        .52;
+
+    filter:
+        blur(9px);
+
+    z-index:
+        -1;
+
+}
+
+
+/* =========================================================
+   VIDEO INNER
+========================================================= */
+
+.video-inner {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        20px;
+
+    background:
+        #070509;
+
+}
+
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+.birthday-video {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    max-height:
+        570px;
+
+    min-height:
+        400px;
+
+    object-fit:
+        contain;
+
+    background:
+        #070509;
+
+}
+
+
+/* =========================================================
+   VIDEO OVERLAY
+========================================================= */
+
+.video-overlay {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(8,4,10,.08),
+            rgba(8,4,10,.42)
+        );
+
+    transition:
+        opacity .35s ease,
+        visibility .35s ease;
+
+}
+
+
+/* =========================================================
+   VIDEO PLAY BUTTON
+========================================================= */
+
+.video-play-button {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        11px;
+
+    min-width:
+        195px;
+
+    min-height:
+        120px;
+
+    padding:
+        17px 22px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.20);
+
+    border-radius:
+        22px;
+
+    color:
+        white;
+
+    font-family:
+        "DM Sans",
+        "Noto Sans Bengali",
+        sans-serif;
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+
+    background:
+        rgba(232,38,111,.84);
+
+    box-shadow:
+
+        0 18px 45px
+        rgba(0,0,0,.40),
+
+        0 0 35px
+        rgba(255,40,120,.28);
+
+    backdrop-filter:
+        blur(16px);
+
+    -webkit-backdrop-filter:
+        blur(16px);
+
+    cursor:
+        pointer;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.video-play-button:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.03);
+
+    box-shadow:
+
+        0 23px 50px
+        rgba(0,0,0,.44),
+
+        0 0 45px
+        rgba(255,40,120,.38);
+
+}
+
+
+.video-play-button:active {
+
+    transform:
+        scale(.96);
+
+}
+
+
+/* =========================================================
+   PLAY ICON
+========================================================= */
+
+.play-icon {
+
+    width:
+        54px;
+
+    height:
+        54px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding-left:
+        3px;
+
+    border-radius:
+        50%;
+
+    font-size:
+        19px;
+
+    background:
+        rgba(255,255,255,.15);
+
+    border:
+        1px solid
+        rgba(255,255,255,.22);
+
+}
+
+
+/* =========================================================
+   BIRTHDAY MESSAGE
+========================================================= */
+
+.birthday-message {
+
+    max-width:
+        350px;
+
+    margin:
+        0 auto;
+
+    color:
+        rgba(255,255,255,.68);
+
+    font-size:
+        13px;
+
+    line-height:
+        1.85;
+
+}
+
+
+.final-love {
+
+    margin-top:
+        10px;
+
+    color:
+        #f19abc;
+
+    font-size:
+        15px;
+
+    font-weight:
+        700;
+
+}
+
+
+/* =========================================================
+   MOBILE — iPHONE 12 PRO
+========================================================= */
+
+@media (max-width: 500px) {
+
+
+    .page {
+
+        padding:
+            24px 20px;
+
+    }
+
+
+    .content {
+
+        max-width:
+            390px;
+
+    }
+
+
+    .eyebrow {
+
+        font-size:
+            8.5px;
+
+        letter-spacing:
+            2.3px;
+
+        margin-bottom:
+            22px;
+
+    }
+
+
+    .heart-circle {
+
+        width:
+            74px;
+
+        height:
+            74px;
+
+        font-size:
+            28px;
+
+    }
+
+
+    .main-heart {
+
+        margin-bottom:
+            23px;
+
+    }
+
+
+    h1 {
+
+        font-size:
+            51px;
+
+    }
+
+
+    h2 {
+
+        font-size:
+            32px;
+
+    }
+
+
+    .description {
+
+        font-size:
+            13px;
+
+        line-height:
+            1.75;
+
+    }
+
+
+    .primary-btn {
+
+        max-width:
+            100%;
+
+        height:
+            57px;
+
+    }
+
+
+    .question-icon {
+
+        width:
+            64px;
+
+        height:
+            64px;
+
+        font-size:
+            30px;
+
+        margin-bottom:
+            21px;
+
+    }
+
+
+    .choice-btn {
+
+        min-height:
+            72px;
+
+    }
+
+
+    .choice-icon {
+
+        width:
+            49px;
+
+        height:
+            49px;
+
+    }
+
+
+    .answer-grid {
+
+        gap:
+            11px;
+
+    }
+
+
+    .answer-btn {
+
+        min-height:
+            130px;
+
+        padding:
+            18px 12px;
+
+        border-radius:
+            18px;
+
+    }
+
+
+    .answer-main {
+
+        font-size:
+            15px;
+
+    }
+
+
+    .memory-card {
+
+        padding:
+            7px;
+
+        border-radius:
+            24px;
+
+        margin-bottom:
+            19px;
+
+    }
+
+
+    .memory-image-wrapper {
+
+        border-radius:
+            18px;
+
+        aspect-ratio:
+            4 / 5;
+
+    }
+
+
+    .memory-text {
+
+        margin-bottom:
+            19px;
+
+    }
+
+
+    .memory-text h2 {
+
+        font-size:
+            28px;
+
+    }
+
+
+    .memory-text p {
+
+        font-size:
+            12.5px;
+
+    }
+
+
+    .result-heart {
+
+        width:
+            68px;
+
+        height:
+            68px;
+
+        font-size:
+            30px;
+
+    }
+
+
+    .birthday-content {
+
+        max-width:
+            380px;
+
+    }
+
+
+    .birthday-heart {
+
+        width:
+            62px;
+
+        height:
+            62px;
+
+        font-size:
+            29px;
+
+    }
+
+
+    .birthday-title {
+
+        font-size:
+            31px;
+
+    }
+
+
+    .birthday-subtitle {
+
+        font-size:
+            12.5px;
+
+        margin-bottom:
+            19px;
+
+    }
+
+
+    .birthday-video-card {
+
+        padding:
+            7px;
+
+        border-radius:
+            23px;
+
+    }
+
+
+    .video-inner {
+
+        border-radius:
+            17px;
+
+    }
+
+
+    .birthday-video {
+
+        min-height:
+            350px;
+
+        max-height:
+            520px;
+
+    }
+
+
+    .video-play-button {
+
+        min-width:
+            175px;
+
+        min-height:
+            105px;
+
+        font-size:
+            12px;
+
+    }
+
+
+    .play-icon {
+
+        width:
+            48px;
+
+        height:
+            48px;
+
+        font-size:
+            17px;
+
+    }
+
+}
+
+
+/* =========================================================
+   SHORT SCREEN
+========================================================= */
+
+@media (max-height: 750px) {
+
+
+    .page {
+
+        padding-top:
+            18px;
+
+        padding-bottom:
+            18px;
+
+    }
+
+
+    .eyebrow {
+
+        margin-bottom:
+            16px;
+
+    }
+
+
+    .heart-circle {
+
+        width:
+            62px;
+
+        height:
+            62px;
+
+    }
+
+
+    .main-heart {
+
+        margin-bottom:
+            16px;
+
+    }
+
+
+    h1 {
+
+        font-size:
+            43px;
+
+        margin-bottom:
+            16px;
+
+    }
+
+
+    h2 {
+
+        font-size:
+            28px;
+
+        margin-bottom:
+            12px;
+
+    }
+
+
+    .description {
+
+        margin-bottom:
+            19px;
+
+    }
+
+
+    .answer-btn {
+
+        min-height:
+            112px;
+
+    }
+
+
+    .memory-card {
+
+        max-width:
+            315px;
+
+        margin-bottom:
+            14px;
+
+    }
+
+
+    .memory-image-wrapper {
+
+        aspect-ratio:
+            4 / 4.7;
+
+    }
+
+
+    .memory-text h2 {
+
+        font-size:
+            25px;
+
+    }
+
+
+    .memory-text p {
+
+        font-size:
+            11.5px;
+
+    }
+
+
+    .birthday-video-card {
+
+        margin-bottom:
+            15px;
+
+    }
+
+
+    .birthday-video {
+
+        min-height:
+            285px;
+
+        max-height:
+            410px;
+
+    }
+
+
+    .birthday-message {
+
+        font-size:
+            11.5px;
+
+    }
+
+}/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+
+body {
+
+    font-family:
+        "DM Sans",
+        "Noto Sans Bengali",
+        sans-serif;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            145deg,
+            #090408 0%,
+            #170811 45%,
+            #080308 100%
+        );
+
+    overflow: hidden;
+
+    -webkit-font-smoothing: antialiased;
+
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.background {
+
+    position: fixed;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+}
+
+
+.glow {
+
+    position: absolute;
+
+    width: 340px;
+
+    height: 340px;
+
+    border-radius: 50%;
+
+    filter: blur(110px);
+
+    opacity: .20;
+
+}
+
+
+.glow-1 {
+
+    top: -150px;
+
+    right: -130px;
+
+    background: #b21f60;
+
+}
+
+
+.glow-2 {
+
+    bottom: -150px;
+
+    left: -140px;
+
+    background: #791545;
+
+}
+
+
+.glow-3 {
+
+    top: 42%;
+
+    left: 45%;
+
+    width: 220px;
+
+    height: 220px;
+
+    background: #6e183f;
+
+    opacity: .08;
+
+}
+
+
+/* =========================================================
+   FLOATING HEARTS
+========================================================= */
+
+.floating-heart {
+
+    position: absolute;
+
+    color:
+        rgba(255, 117, 164, .15);
+
+    font-family: serif;
+
+    animation:
+        floatHeart 8s
+        infinite ease-in-out;
+
+}
+
+
+.heart-1 {
+
+    top: 12%;
+    left: 7%;
+
+    font-size: 23px;
+
+}
+
+
+.heart-2 {
+
+    top: 24%;
+    right: 9%;
+
+    font-size: 17px;
+
+    animation-delay: 2s;
+
+}
+
+
+.heart-3 {
+
+    bottom: 22%;
+    left: 8%;
+
+    font-size: 19px;
+
+    animation-delay: 4s;
+
+}
+
+
+.heart-4 {
+
+    bottom: 12%;
+    right: 10%;
+
+    font-size: 25px;
+
+    animation-delay: 1s;
+
+}
+
+
+.heart-5 {
+
+    top: 52%;
+    left: 3%;
+
+    font-size: 13px;
+
+    animation-delay: 3s;
+
+}
+
+
+.heart-6 {
+
+    top: 65%;
+    right: 4%;
+
+    font-size: 14px;
+
+    animation-delay: 5s;
+
+}
+
+
+@keyframes floatHeart {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-22px)
+            rotate(8deg);
+
+    }
+
+}
+
+
+/* =========================================================
+   APP
+========================================================= */
+
+#app {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    height: 100vh;
+
+}
+
+
+/* =========================================================
+   PAGE TRANSITION
+========================================================= */
+
+.page {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateY(25px)
+        scale(.975);
+
+    transition:
+        opacity .60s ease,
+        transform .60s ease,
+        visibility .60s ease;
+
+    overflow-y: auto;
+
+    scrollbar-width: none;
+
+}
+
+
+.page::-webkit-scrollbar {
+    display: none;
+}
+
+
+.page.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.content {
+
+    width: 100%;
+
+    max-width: 420px;
+
+    text-align: center;
+
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.eyebrow {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-bottom: 27px;
+
+    color:
+        rgba(255,255,255,.44);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+}
+
+
+.eyebrow span {
+
+    width: 22px;
+
+    height: 1px;
+
+    background:
+        rgba(255,255,255,.18);
+
+}
+
+
+/* =========================================================
+   MAIN HEART
+========================================================= */
+
+.main-heart {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 28px;
+
+}
+
+
+.heart-circle {
+
+    width: 84px;
+
+    height: 84px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 32px;
+
+    color: #ffb8d0;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.14),
+            rgba(255,255,255,.035)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.13);
+
+    box-shadow:
+
+        0 0 50px
+        rgba(213,36,108,.27),
+
+        inset 0 1px 1px
+        rgba(255,255,255,.13);
+
+    animation:
+        heartBeat 2.2s
+        infinite ease-in-out;
+
+}
+
+
+@keyframes heartBeat {
+
+    0%,
+    100% {
+
+        transform:
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            scale(1.07);
+
+    }
+
+}
+
+
+/* =========================================================
+   HEADINGS
+========================================================= */
+
+h1,
+h2 {
+
+    font-family:
+        "Playfair Display",
+        "Noto Sans Bengali",
+        serif;
+
+}
+
+
+h1 {
+
+    font-size:
+        clamp(48px, 13vw, 68px);
+
+    line-height:
+        1.02;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        -2px;
+
+    margin-bottom:
+        23px;
+
+}
+
+
+h2 {
+
+    font-size:
+        clamp(31px, 8vw, 39px);
+
+    line-height:
+        1.30;
+
+    font-weight:
+        600;
+
+    margin-bottom:
+        17px;
+
+}
+
+
+h1 span,
+h2 span {
+
+    color:
+        #f3a3c4;
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.description {
+
+    color:
+        rgba(255,255,255,.61);
+
+    font-size:
+        14px;
+
+    line-height:
+        1.85;
+
+    margin-bottom:
+        30px;
+
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.primary-btn {
+
+    width: 100%;
+
+    max-width: 320px;
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        0 8px 0 24px;
+
+    border: none;
+
+    border-radius:
+        100px;
+
+    color:
+        #270913;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #ffeaf2
+        );
+
+    font-family:
+        "DM Sans",
+        "Noto Sans Bengali",
+        sans-serif;
+
+    font-size:
+        14px;
+
+    font-weight:
+        700;
+
+    cursor:
+        pointer;
+
+    box-shadow:
+
+        0 17px 45px
+        rgba(0,0,0,.38),
+
+        0 0 25px
+        rgba(255,110,160,.08);
+
+    transition:
+        transform .28s ease,
+        box-shadow .28s ease;
+
+}
+
+
+.primary-btn:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+
+        0 23px 55px
+        rgba(0,0,0,.45),
+
+        0 0 35px
+        rgba(255,110,160,.14);
+
+}
+
+
+.primary-btn:active {
+
+    transform:
+        scale(.965);
+
+}
+
+
+.arrow {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: white;
+
+    background:
+        #68183a;
+
+    font-size: 20px;
+
+}
+
+
+/* =========================================================
+   SIGNATURE
+========================================================= */
+
+.signature {
+
+    margin-top: 27px;
+
+    color:
+        rgba(255,255,255,.29);
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.signature span {
+
+    color:
+        #e98bad;
+
+    margin-left: 5px;
+
+}
+
+
+/* =========================================================
+   QUESTION ICON
+========================================================= */
+
+.question-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin:
+        0 auto 25px;
+
+    border-radius: 50%;
+
+    color:
+        #f4aec9;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        33px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.09),
+            rgba(255,255,255,.025)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    box-shadow:
+
+        0 0 38px
+        rgba(186,37,99,.18);
+
+}
+
+
+.love-question-icon {
+
+    color:
+        #ffabc9;
+
+}
+
+
+.money-question-icon {
+
+    color:
+        #f3c56d;
+
+}
+
+
+/* =========================================================
+   MAIN OPTIONS
+========================================================= */
+
+.options {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        13px;
+
+    width:
+        100%;
+
+}
+
+
+.choice-btn {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    min-height:
+        76px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        15px;
+
+    padding:
+        10px 14px;
+
+    color:
+        white;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.075),
+            rgba(255,255,255,.035)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.11);
+
+    border-radius:
+        20px;
+
+    cursor:
+        pointer;
+
+    text-align:
+        left;
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+.choice-btn:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.01);
+
+    background:
+        rgba(255,255,255,.10);
+
+    border-color:
+        rgba(255,175,205,.30);
+
+    box-shadow:
+        0 14px 35px
+        rgba(0,0,0,.25);
+
+}
+
+
+.choice-btn:active {
+
+    transform:
+        scale(.965);
+
+}
+
+
+.choice-icon {
+
+    width:
+        52px;
+
+    height:
+        52px;
+
+    flex-shrink:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        15px;
+
+    background:
+        rgba(255,100,155,.10);
+
+    font-size:
+        23px;
+
+}
+
+
+.choice-icon.money {
+
+    background:
+        rgba(255,190,70,.09);
+
+}
+
+
+.choice-text {
+
+    flex:
+        1;
+
+}
+
+
+.choice-text strong {
+
+    font-size:
+        16px;
+
+    font-weight:
+        600;
+
+}
+
+
+.choice-arrow {
+
+    color:
+        rgba(255,255,255,.35);
+
+    font-size:
+        20px;
+
+    padding-right:
+        4px;
+
+}
+
+
+.bottom-note {
+
+    margin-top:
+        24px;
+
+    color:
+        rgba(255,255,255,.25);
+
+    font-size:
+        11px;
+
+    letter-spacing:
+        1px;
+
+}
+
+
+/* =========================================================
+   ANSWER GRID
+========================================================= */
+
+.answer-grid {
+
+    width:
+        100%;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap:
+        13px;
+
+}
+
+
+.answer-btn {
+
+    position:
+        relative;
+
+    min-height:
+        142px;
+
+    padding:
+        20px 13px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        flex-start;
+
+    justify-content:
+        flex-end;
+
+    border:
+        1px solid
+        rgba(255,255,255,.11);
+
+    border-radius:
+        20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.07),
+            rgba(255,255,255,.025)
+        );
+
+    color:
+        white;
+
+    cursor:
+        pointer;
+
+    text-align:
+        left;
+
+    overflow:
+        hidden;
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+    transition:
+        transform .30s ease,
+        border-color .30s ease,
+        background .30s ease,
+        box-shadow .30s ease;
+
+}
+
+
+.answer-btn::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        linear-gradient(
+            130deg,
+            rgba(255,100,160,.08),
+            transparent 50%
+        );
+
+    opacity:
+        0;
+
+    transition:
+        opacity .3s ease;
+
+}
+
+
+.answer-btn:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(255,155,195,.28);
+
+    background:
+        rgba(255,255,255,.09);
+
+    box-shadow:
+        0 16px 35px
+        rgba(0,0,0,.30);
+
+}
+
+
+.answer-btn:hover::before {
+
+    opacity:
+        1;
+
+}
+
+
+.answer-btn:active {
+
+    transform:
+        scale(.96);
+
+}
+
+
+.answer-number {
+
+    position:
+        absolute;
+
+    top:
+        13px;
+
+    right:
+        13px;
+
+    color:
+        rgba(255,255,255,.27);
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        1px;
+
+}
+
+
+.answer-main {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    font-size:
+        16px;
+
+    font-weight:
+        700;
+
+    line-height:
+        1.35;
+
+}
+
+
+.answer-arrow {
+
+    position:
+        absolute;
+
+    right:
+        13px;
+
+    bottom:
+        13px;
+
+    color:
+        rgba(255,255,255,.28);
+
+    font-size:
+        16px;
+
+}
+
+
+.special-choice {
+
+    border-color:
+        rgba(255,80,145,.30);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,60,130,.11),
+            rgba(255,255,255,.035)
+        );
+
+}
+
+
+.special-choice .answer-main {
+
+    color:
+        #f18caf;
+
+}
+
+
+/* =========================================================
+   MONEY PAGE
+========================================================= */
+
+.money-heading {
+
+    margin-bottom:
+        10px;
+
+}
+
+
+.money-question-text {
+
+    color:
+        rgba(255,255,255,.65);
+
+    font-size:
+        15px;
+
+    line-height:
+        1.7;
+
+    margin-bottom:
+        27px;
+
+}
+
+
+/* =========================================================
+   MEMORY CONTENT
+========================================================= */
+
+.memory-content {
+
+    max-width:
+        410px;
+
+}
+
+
+/* =========================================================
+   PREMIUM 3D MEMORY CARD
+========================================================= */
+
+.memory-card {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    padding:
+        8px;
+
+    margin:
+        0 auto 24px;
+
+    border-radius:
+        27px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.17),
+            rgba(255,255,255,.035)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.16);
+
+    box-shadow:
+
+        0 30px 75px
+        rgba(0,0,0,.46),
+
+        0 0 50px
+        rgba(255,55,120,.12),
+
+        inset 0 1px 0
+        rgba(255,255,255,.12);
+
+    backdrop-filter:
+        blur(20px);
+
+    -webkit-backdrop-filter:
+        blur(20px);
+
+    transform:
+        perspective(1100px)
+        rotateX(0deg)
+        rotateY(0deg)
+        scale(1);
+
+    transform-style:
+        preserve-3d;
+
+    transition:
+        transform .25s ease,
+        box-shadow .3s ease;
+
+    will-change:
+        transform;
+
+}
+
+
+.memory-card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        -2px;
+
+    border-radius:
+        29px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,80,145,.36),
+            transparent 35%,
+            transparent 65%,
+            rgba(160,80,255,.20)
+        );
+
+    opacity:
+        .48;
+
+    filter:
+        blur(9px);
+
+    z-index:
+        -1;
+
+}
+
+
+/* =========================================================
+   MEMORY IMAGE
+========================================================= */
+
+.memory-image-wrapper {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    aspect-ratio:
+        4 / 5;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        20px;
+
+    background:
+        #120c13;
+
+}
+
+
+.memory-image {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    display:
+        block;
+
+    object-fit:
+        cover;
+
+    object-position:
+        center;
+
+    transition:
+        transform .7s
+        cubic-bezier(.22,1,.36,1);
+
+}
+
+
+.memory-card:hover .memory-image {
+
+    transform:
+        scale(1.045);
+
+}
+
+
+/* =========================================================
+   IMAGE SHINE
+========================================================= */
+
+.memory-image-wrapper::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        linear-gradient(
+            115deg,
+            transparent 20%,
+            rgba(255,255,255,.12) 45%,
+            transparent 70%
+        );
+
+    transform:
+        translateX(-120%);
+
+    transition:
+        transform .9s ease;
+
+    pointer-events:
+        none;
+
+}
+
+
+.memory-card:hover
+.memory-image-wrapper::after {
+
+    transform:
+        translateX(120%);
+
+}
+
+
+/* =========================================================
+   MEMORY TEXT
+========================================================= */
+
+.memory-text {
+
+    margin-bottom:
+        23px;
+
+}
+
+
+.memory-text h2 {
+
+    margin-bottom:
+        10px;
+
+}
+
+
+.memory-text p {
+
+    max-width:
+        350px;
+
+    margin:
+        0 auto;
+
+    color:
+        rgba(255,255,255,.62);
+
+    font-size:
+        14px;
+
+    line-height:
+        1.8;
+
+}
+
+
+/* =========================================================
+   RESULT PAGE
+========================================================= */
+
+.result-content {
+
+    max-width:
+        410px;
+
+}
+
+
+.result-heart {
+
+    width:
+        78px;
+
+    height:
+        78px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    margin:
+        0 auto 20px;
+
+    border-radius:
+        50%;
+
+    font-size:
+        35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,80,145,.18),
+            rgba(255,255,255,.04)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.13);
+
+    box-shadow:
+
+        0 0 45px
+        rgba(255,50,120,.15);
+
+}
+
+
+.result-message {
+
+    max-width:
+        350px;
+
+    margin:
+        0 auto 28px;
+
+    color:
+        rgba(255,255,255,.65);
+
+    font-size:
+        14px;
+
+    line-height:
+        1.85;
+
+}
+
+
+/* =========================================================
+   BIRTHDAY PAGE
+========================================================= */
+
+.birthday-content {
+
+    max-width:
+        430px;
+
+    padding-bottom:
+        35px;
+
+}
+
+
+.birthday-heart {
+
+    width:
+        72px;
+
+    height:
+        72px;
+
+    margin:
+        5px auto 14px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        50%;
+
+    font-size:
+        33px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,75,135,.19),
+            rgba(255,255,255,.04)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.14);
+
+    box-shadow:
+
+        0 15px 40px
+        rgba(0,0,0,.30),
+
+        0 0 35px
+        rgba(255,50,120,.15);
+
+}
+
+
+.birthday-title {
+
+    margin-bottom:
+        9px;
+
+}
+
+
+.birthday-subtitle {
+
+    color:
+        rgba(255,255,255,.65);
+
+    font-size:
+        14px;
+
+    margin-bottom:
+        23px;
+
+}
+
+
+/* =========================================================
+   PREMIUM VIDEO CARD
+========================================================= */
+
+.birthday-video-card {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    padding:
+        8px;
+
+    margin:
+        0 auto 22px;
+
+    border-radius:
+        27px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.17),
+            rgba(255,255,255,.035)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.16);
+
+    box-shadow:
+
+        0 30px 75px
+        rgba(0,0,0,.48),
+
+        0 0 50px
+        rgba(255,55,120,.14),
+
+        inset 0 1px 0
+        rgba(255,255,255,.13);
+
+    backdrop-filter:
+        blur(22px);
+
+    -webkit-backdrop-filter:
+        blur(22px);
+
+    transform:
+        perspective(1200px)
+        rotateX(0deg)
+        rotateY(0deg)
+        scale(1);
+
+    transform-style:
+        preserve-3d;
+
+    transition:
+        transform .25s ease,
+        box-shadow .35s ease;
+
+    will-change:
+        transform;
+
+}
+
+
+.birthday-video-card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        -2px;
+
+    border-radius:
+        29px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,80,145,.38),
+            transparent 35%,
+            transparent 65%,
+            rgba(165,80,255,.22)
+        );
+
+    opacity:
+        .52;
+
+    filter:
+        blur(9px);
+
+    z-index:
+        -1;
+
+}
+
+
+/* =========================================================
+   VIDEO INNER
+========================================================= */
+
+.video-inner {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        20px;
+
+    background:
+        #070509;
+
+}
+
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+.birthday-video {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    max-height:
+        570px;
+
+    min-height:
+        400px;
+
+    object-fit:
+        contain;
+
+    background:
+        #070509;
+
+}
+
+
+/* =========================================================
+   VIDEO OVERLAY
+========================================================= */
+
+.video-overlay {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(8,4,10,.08),
+            rgba(8,4,10,.42)
+        );
+
+    transition:
+        opacity .35s ease,
+        visibility .35s ease;
+
+}
+
+
+/* =========================================================
+   VIDEO PLAY BUTTON
+========================================================= */
+
+.video-play-button {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        11px;
+
+    min-width:
+        195px;
+
+    min-height:
+        120px;
+
+    padding:
+        17px 22px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.20);
+
+    border-radius:
+        22px;
+
+    color:
+        white;
+
+    font-family:
+        "DM Sans",
+        "Noto Sans Bengali",
+        sans-serif;
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+
+    background:
+        rgba(232,38,111,.84);
+
+    box-shadow:
+
+        0 18px 45px
+        rgba(0,0,0,.40),
+
+        0 0 35px
+        rgba(255,40,120,.28);
+
+    backdrop-filter:
+        blur(16px);
+
+    -webkit-backdrop-filter:
+        blur(16px);
+
+    cursor:
+        pointer;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.video-play-button:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.03);
+
+    box-shadow:
+
+        0 23px 50px
+        rgba(0,0,0,.44),
+
+        0 0 45px
+        rgba(255,40,120,.38);
+
+}
+
+
+.video-play-button:active {
+
+    transform:
+        scale(.96);
+
+}
+
+
+/* =========================================================
+   PLAY ICON
+========================================================= */
+
+.play-icon {
+
+    width:
+        54px;
+
+    height:
+        54px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding-left:
+        3px;
+
+    border-radius:
+        50%;
+
+    font-size:
+        19px;
+
+    background:
+        rgba(255,255,255,.15);
+
+    border:
+        1px solid
+        rgba(255,255,255,.22);
+
+}
+
+
+/* =========================================================
+   BIRTHDAY MESSAGE
+========================================================= */
+
+.birthday-message {
+
+    max-width:
+        350px;
+
+    margin:
+        0 auto;
+
+    color:
+        rgba(255,255,255,.68);
+
+    font-size:
+        13px;
+
+    line-height:
+        1.85;
+
+}
+
+
+.final-love {
+
+    margin-top:
+        10px;
+
+    color:
+        #f19abc;
+
+    font-size:
+        15px;
+
+    font-weight:
+        700;
+
+}
+
+
+/* =========================================================
+   MOBILE — iPHONE 12 PRO
+========================================================= */
+
+@media (max-width: 500px) {
+
+
+    .page {
+
+        padding:
+            24px 20px;
+
+    }
+
+
+    .content {
+
+        max-width:
+            390px;
+
+    }
+
+
+    .eyebrow {
+
+        font-size:
+            8.5px;
+
+        letter-spacing:
+            2.3px;
+
+        margin-bottom:
+            22px;
+
+    }
+
+
+    .heart-circle {
+
+        width:
+            74px;
+
+        height:
+            74px;
+
+        font-size:
+            28px;
+
+    }
+
+
+    .main-heart {
+
+        margin-bottom:
+            23px;
+
+    }
+
+
+    h1 {
+
+        font-size:
+            51px;
+
+    }
+
+
+    h2 {
+
+        font-size:
+            32px;
+
+    }
+
+
+    .description {
+
+        font-size:
+            13px;
+
+        line-height:
+            1.75;
+
+    }
+
+
+    .primary-btn {
+
+        max-width:
+            100%;
+
+        height:
+            57px;
+
+    }
+
+
+    .question-icon {
+
+        width:
+            64px;
+
+        height:
+            64px;
+
+        font-size:
+            30px;
+
+        margin-bottom:
+            21px;
+
+    }
+
+
+    .choice-btn {
+
+        min-height:
+            72px;
+
+    }
+
+
+    .choice-icon {
+
+        width:
+            49px;
+
+        height:
+            49px;
+
+    }
+
+
+    .answer-grid {
+
+        gap:
+            11px;
+
+    }
+
+
+    .answer-btn {
+
+        min-height:
+            130px;
+
+        padding:
+            18px 12px;
+
+        border-radius:
+            18px;
+
+    }
+
+
+    .answer-main {
+
+        font-size:
+            15px;
+
+    }
+
+
+    .memory-card {
+
+        padding:
+            7px;
+
+        border-radius:
+            24px;
+
+        margin-bottom:
+            19px;
+
+    }
+
+
+    .memory-image-wrapper {
+
+        border-radius:
+            18px;
+
+        aspect-ratio:
+            4 / 5;
+
+    }
+
+
+    .memory-text {
+
+        margin-bottom:
+            19px;
+
+    }
+
+
+    .memory-text h2 {
+
+        font-size:
+            28px;
+
+    }
+
+
+    .memory-text p {
+
+        font-size:
+            12.5px;
+
+    }
+
+
+    .result-heart {
+
+        width:
+            68px;
+
+        height:
+            68px;
+
+        font-size:
+            30px;
+
+    }
+
+
+    .birthday-content {
+
+        max-width:
+            380px;
+
+    }
+
+
+    .birthday-heart {
+
+        width:
+            62px;
+
+        height:
+            62px;
+
+        font-size:
+            29px;
+
+    }
+
+
+    .birthday-title {
+
+        font-size:
+            31px;
+
+    }
+
+
+    .birthday-subtitle {
+
+        font-size:
+            12.5px;
+
+        margin-bottom:
+            19px;
+
+    }
+
+
+    .birthday-video-card {
+
+        padding:
+            7px;
+
+        border-radius:
+            23px;
+
+    }
+
+
+    .video-inner {
+
+        border-radius:
+            17px;
+
+    }
+
+
+    .birthday-video {
+
+        min-height:
+            350px;
+
+        max-height:
+            520px;
+
+    }
+
+
+    .video-play-button {
+
+        min-width:
+            175px;
+
+        min-height:
+            105px;
+
+        font-size:
+            12px;
+
+    }
+
+
+    .play-icon {
+
+        width:
+            48px;
+
+        height:
+            48px;
+
+        font-size:
+            17px;
+
+    }
+
+}
+
+
+/* =========================================================
+   SHORT SCREEN
+========================================================= */
+
+@media (max-height: 750px) {
+
+
+    .page {
+
+        padding-top:
+            18px;
+
+        padding-bottom:
+            18px;
+
+    }
+
+
+    .eyebrow {
+
+        margin-bottom:
+            16px;
+
+    }
+
+
+    .heart-circle {
+
+        width:
+            62px;
+
+        height:
+            62px;
+
+    }
+
+
+    .main-heart {
+
+        margin-bottom:
+            16px;
+
+    }
+
+
+    h1 {
+
+        font-size:
+            43px;
+
+        margin-bottom:
+            16px;
+
+    }
+
+
+    h2 {
+
+        font-size:
+            28px;
+
+        margin-bottom:
+            12px;
+
+    }
+
+
+    .description {
+
+        margin-bottom:
+            19px;
+
+    }
+
+
+    .answer-btn {
+
+        min-height:
+            112px;
+
+    }
+
+
+    .memory-card {
+
+        max-width:
+            315px;
+
+        margin-bottom:
+            14px;
+
+    }
+
+
+    .memory-image-wrapper {
+
+        aspect-ratio:
+            4 / 4.7;
+
+    }
+
+
+    .memory-text h2 {
+
+        font-size:
+            25px;
+
+    }
+
+
+    .memory-text p {
+
+        font-size:
+            11.5px;
+
+    }
+
+
+    .birthday-video-card {
+
+        margin-bottom:
+            15px;
+
+    }
+
+
+    .birthday-video {
+
+        min-height:
+            285px;
+
+        max-height:
+            410px;
+
+    }
+
+
+    .birthday-message {
+
+        font-size:
+            11.5px;
+
+    }
+
+}/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+
+body {
+
+    font-family:
+        "DM Sans",
+        "Noto Sans Bengali",
+        sans-serif;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            145deg,
+            #090408 0%,
+            #170811 45%,
+            #080308 100%
+        );
+
+    overflow: hidden;
+
+    -webkit-font-smoothing: antialiased;
+
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.background {
+
+    position: fixed;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+}
+
+
+.glow {
+
+    position: absolute;
+
+    width: 340px;
+
+    height: 340px;
+
+    border-radius: 50%;
+
+    filter: blur(110px);
+
+    opacity: .20;
+
+}
+
+
+.glow-1 {
+
+    top: -150px;
+
+    right: -130px;
+
+    background: #b21f60;
+
+}
+
+
+.glow-2 {
+
+    bottom: -150px;
+
+    left: -140px;
+
+    background: #791545;
+
+}
+
+
+.glow-3 {
+
+    top: 42%;
+
+    left: 45%;
+
+    width: 220px;
+
+    height: 220px;
+
+    background: #6e183f;
+
+    opacity: .08;
+
+}
+
+
+/* =========================================================
+   FLOATING HEARTS
+========================================================= */
+
+.floating-heart {
+
+    position: absolute;
+
+    color:
+        rgba(255, 117, 164, .15);
+
+    font-family: serif;
+
+    animation:
+        floatHeart 8s
+        infinite ease-in-out;
+
+}
+
+
+.heart-1 {
+
+    top: 12%;
+    left: 7%;
+
+    font-size: 23px;
+
+}
+
+
+.heart-2 {
+
+    top: 24%;
+    right: 9%;
+
+    font-size: 17px;
+
+    animation-delay: 2s;
+
+}
+
+
+.heart-3 {
+
+    bottom: 22%;
+    left: 8%;
+
+    font-size: 19px;
+
+    animation-delay: 4s;
+
+}
+
+
+.heart-4 {
+
+    bottom: 12%;
+    right: 10%;
+
+    font-size: 25px;
+
+    animation-delay: 1s;
+
+}
+
+
+.heart-5 {
+
+    top: 52%;
+    left: 3%;
+
+    font-size: 13px;
+
+    animation-delay: 3s;
+
+}
+
+
+.heart-6 {
+
+    top: 65%;
+    right: 4%;
+
+    font-size: 14px;
+
+    animation-delay: 5s;
+
+}
+
+
+@keyframes floatHeart {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-22px)
+            rotate(8deg);
+
+    }
+
+}
+
+
+/* =========================================================
+   APP
+========================================================= */
+
+#app {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    height: 100vh;
+
+}
+
+
+/* =========================================================
+   PAGE TRANSITION
+========================================================= */
+
+.page {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateY(25px)
+        scale(.975);
+
+    transition:
+        opacity .60s ease,
+        transform .60s ease,
+        visibility .60s ease;
+
+    overflow-y: auto;
+
+    scrollbar-width: none;
+
+}
+
+
+.page::-webkit-scrollbar {
+    display: none;
+}
+
+
+.page.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.content {
+
+    width: 100%;
+
+    max-width: 420px;
+
+    text-align: center;
+
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.eyebrow {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-bottom: 27px;
+
+    color:
+        rgba(255,255,255,.44);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+}
+
+
+.eyebrow span {
+
+    width: 22px;
+
+    height: 1px;
+
+    background:
+        rgba(255,255,255,.18);
+
+}
+
+
+/* =========================================================
+   MAIN HEART
+========================================================= */
+
+.main-heart {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 28px;
+
+}
+
+
+.heart-circle {
+
+    width: 84px;
+
+    height: 84px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 32px;
+
+    color: #ffb8d0;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.14),
+            rgba(255,255,255,.035)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.13);
+
+    box-shadow:
+
+        0 0 50px
+        rgba(213,36,108,.27),
+
+        inset 0 1px 1px
+        rgba(255,255,255,.13);
+
+    animation:
+        heartBeat 2.2s
+        infinite ease-in-out;
+
+}
+
+
+@keyframes heartBeat {
+
+    0%,
+    100% {
+
+        transform:
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            scale(1.07);
+
+    }
+
+}
+
+
+/* =========================================================
+   HEADINGS
+========================================================= */
+
+h1,
+h2 {
+
+    font-family:
+        "Playfair Display",
+        "Noto Sans Bengali",
+        serif;
+
+}
+
+
+h1 {
+
+    font-size:
+        clamp(48px, 13vw, 68px);
+
+    line-height:
+        1.02;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        -2px;
+
+    margin-bottom:
+        23px;
+
+}
+
+
+h2 {
+
+    font-size:
+        clamp(31px, 8vw, 39px);
+
+    line-height:
+        1.30;
+
+    font-weight:
+        600;
+
+    margin-bottom:
+        17px;
+
+}
+
+
+h1 span,
+h2 span {
+
+    color:
+        #f3a3c4;
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.description {
+
+    color:
+        rgba(255,255,255,.61);
+
+    font-size:
+        14px;
+
+    line-height:
+        1.85;
+
+    margin-bottom:
+        30px;
+
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.primary-btn {
+
+    width: 100%;
+
+    max-width: 320px;
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        0 8px 0 24px;
+
+    border: none;
+
+    border-radius:
+        100px;
+
+    color:
+        #270913;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #ffeaf2
+        );
+
+    font-family:
+        "DM Sans",
+        "Noto Sans Bengali",
+        sans-serif;
+
+    font-size:
+        14px;
+
+    font-weight:
+        700;
+
+    cursor:
+        pointer;
+
+    box-shadow:
+
+        0 17px 45px
+        rgba(0,0,0,.38),
+
+        0 0 25px
+        rgba(255,110,160,.08);
+
+    transition:
+        transform .28s ease,
+        box-shadow .28s ease;
+
+}
+
+
+.primary-btn:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+
+        0 23px 55px
+        rgba(0,0,0,.45),
+
+        0 0 35px
+        rgba(255,110,160,.14);
+
+}
+
+
+.primary-btn:active {
+
+    transform:
+        scale(.965);
+
+}
+
+
+.arrow {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: white;
+
+    background:
+        #68183a;
+
+    font-size: 20px;
+
+}
+
+
+/* =========================================================
+   SIGNATURE
+========================================================= */
+
+.signature {
+
+    margin-top: 27px;
+
+    color:
+        rgba(255,255,255,.29);
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.signature span {
+
+    color:
+        #e98bad;
+
+    margin-left: 5px;
+
+}
+
+
+/* =========================================================
+   QUESTION ICON
+========================================================= */
+
+.question-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin:
+        0 auto 25px;
+
+    border-radius: 50%;
+
+    color:
+        #f4aec9;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        33px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.09),
+            rgba(255,255,255,.025)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    box-shadow:
+
+        0 0 38px
+        rgba(186,37,99,.18);
+
+}
+
+
+.love-question-icon {
+
+    color:
+        #ffabc9;
+
+}
+
+
+.money-question-icon {
+
+    color:
+        #f3c56d;
+
+}
+
+
+/* =========================================================
+   MAIN OPTIONS
+========================================================= */
+
+.options {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        13px;
+
+    width:
+        100%;
+
+}
+
+
+.choice-btn {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    min-height:
+        76px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        15px;
+
+    padding:
+        10px 14px;
+
+    color:
+        white;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.075),
+            rgba(255,255,255,.035)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.11);
+
+    border-radius:
+        20px;
+
+    cursor:
+        pointer;
+
+    text-align:
+        left;
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+.choice-btn:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.01);
+
+    background:
+        rgba(255,255,255,.10);
+
+    border-color:
+        rgba(255,175,205,.30);
+
+    box-shadow:
+        0 14px 35px
+        rgba(0,0,0,.25);
+
+}
+
+
+.choice-btn:active {
+
+    transform:
+        scale(.965);
+
+}
+
+
+.choice-icon {
+
+    width:
+        52px;
+
+    height:
+        52px;
+
+    flex-shrink:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        15px;
+
+    background:
+        rgba(255,100,155,.10);
+
+    font-size:
+        23px;
+
+}
+
+
+.choice-icon.money {
+
+    background:
+        rgba(255,190,70,.09);
+
+}
+
+
+.choice-text {
+
+    flex:
+        1;
+
+}
+
+
+.choice-text strong {
+
+    font-size:
+        16px;
+
+    font-weight:
+        600;
+
+}
+
+
+.choice-arrow {
+
+    color:
+        rgba(255,255,255,.35);
+
+    font-size:
+        20px;
+
+    padding-right:
+        4px;
+
+}
+
+
+.bottom-note {
+
+    margin-top:
+        24px;
+
+    color:
+        rgba(255,255,255,.25);
+
+    font-size:
+        11px;
+
+    letter-spacing:
+        1px;
+
+}
+
+
+/* =========================================================
+   ANSWER GRID
+========================================================= */
+
+.answer-grid {
+
+    width:
+        100%;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap:
+        13px;
+
+}
+
+
+.answer-btn {
+
+    position:
+        relative;
+
+    min-height:
+        142px;
+
+    padding:
+        20px 13px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        flex-start;
+
+    justify-content:
+        flex-end;
+
+    border:
+        1px solid
+        rgba(255,255,255,.11);
+
+    border-radius:
+        20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.07),
+            rgba(255,255,255,.025)
+        );
+
+    color:
+        white;
+
+    cursor:
+        pointer;
+
+    text-align:
+        left;
+
+    overflow:
+        hidden;
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+    transition:
+        transform .30s ease,
+        border-color .30s ease,
+        background .30s ease,
+        box-shadow .30s ease;
+
+}
+
+
+.answer-btn::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        linear-gradient(
+            130deg,
+            rgba(255,100,160,.08),
+            transparent 50%
+        );
+
+    opacity:
+        0;
+
+    transition:
+        opacity .3s ease;
+
+}
+
+
+.answer-btn:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(255,155,195,.28);
+
+    background:
+        rgba(255,255,255,.09);
+
+    box-shadow:
+        0 16px 35px
+        rgba(0,0,0,.30);
+
+}
+
+
+.answer-btn:hover::before {
+
+    opacity:
+        1;
+
+}
+
+
+.answer-btn:active {
+
+    transform:
+        scale(.96);
+
+}
+
+
+.answer-number {
+
+    position:
+        absolute;
+
+    top:
+        13px;
+
+    right:
+        13px;
+
+    color:
+        rgba(255,255,255,.27);
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        1px;
+
+}
+
+
+.answer-main {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    font-size:
+        16px;
+
+    font-weight:
+        700;
+
+    line-height:
+        1.35;
+
+}
+
+
+.answer-arrow {
+
+    position:
+        absolute;
+
+    right:
+        13px;
+
+    bottom:
+        13px;
+
+    color:
+        rgba(255,255,255,.28);
+
+    font-size:
+        16px;
+
+}
+
+
+.special-choice {
+
+    border-color:
+        rgba(255,80,145,.30);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,60,130,.11),
+            rgba(255,255,255,.035)
+        );
+
+}
+
+
+.special-choice .answer-main {
+
+    color:
+        #f18caf;
+
+}
+
+
+/* =========================================================
+   MONEY PAGE
+========================================================= */
+
+.money-heading {
+
+    margin-bottom:
+        10px;
+
+}
+
+
+.money-question-text {
+
+    color:
+        rgba(255,255,255,.65);
+
+    font-size:
+        15px;
+
+    line-height:
+        1.7;
+
+    margin-bottom:
+        27px;
+
+}
+
+
+/* =========================================================
+   MEMORY CONTENT
+========================================================= */
+
+.memory-content {
+
+    max-width:
+        410px;
+
+}
+
+
+/* =========================================================
+   PREMIUM 3D MEMORY CARD
+========================================================= */
+
+.memory-card {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    padding:
+        8px;
+
+    margin:
+        0 auto 24px;
+
+    border-radius:
+        27px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.17),
+            rgba(255,255,255,.035)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.16);
+
+    box-shadow:
+
+        0 30px 75px
+        rgba(0,0,0,.46),
+
+        0 0 50px
+        rgba(255,55,120,.12),
+
+        inset 0 1px 0
+        rgba(255,255,255,.12);
+
+    backdrop-filter:
+        blur(20px);
+
+    -webkit-backdrop-filter:
+        blur(20px);
+
+    transform:
+        perspective(1100px)
+        rotateX(0deg)
+        rotateY(0deg)
+        scale(1);
+
+    transform-style:
+        preserve-3d;
+
+    transition:
+        transform .25s ease,
+        box-shadow .3s ease;
+
+    will-change:
+        transform;
+
+}
+
+
+.memory-card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        -2px;
+
+    border-radius:
+        29px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,80,145,.36),
+            transparent 35%,
+            transparent 65%,
+            rgba(160,80,255,.20)
+        );
+
+    opacity:
+        .48;
+
+    filter:
+        blur(9px);
+
+    z-index:
+        -1;
+
+}
+
+
+/* =========================================================
+   MEMORY IMAGE
+========================================================= */
+
+.memory-image-wrapper {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    aspect-ratio:
+        4 / 5;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        20px;
+
+    background:
+        #120c13;
+
+}
+
+
+.memory-image {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    display:
+        block;
+
+    object-fit:
+        cover;
+
+    object-position:
+        center;
+
+    transition:
+        transform .7s
+        cubic-bezier(.22,1,.36,1);
+
+}
+
+
+.memory-card:hover .memory-image {
+
+    transform:
+        scale(1.045);
+
+}
+
+
+/* =========================================================
+   IMAGE SHINE
+========================================================= */
+
+.memory-image-wrapper::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        linear-gradient(
+            115deg,
+            transparent 20%,
+            rgba(255,255,255,.12) 45%,
+            transparent 70%
+        );
+
+    transform:
+        translateX(-120%);
+
+    transition:
+        transform .9s ease;
+
+    pointer-events:
+        none;
+
+}
+
+
+.memory-card:hover
+.memory-image-wrapper::after {
+
+    transform:
+        translateX(120%);
+
+}
+
+
+/* =========================================================
+   MEMORY TEXT
+========================================================= */
+
+.memory-text {
+
+    margin-bottom:
+        23px;
+
+}
+
+
+.memory-text h2 {
+
+    margin-bottom:
+        10px;
+
+}
+
+
+.memory-text p {
+
+    max-width:
+        350px;
+
+    margin:
+        0 auto;
+
+    color:
+        rgba(255,255,255,.62);
+
+    font-size:
+        14px;
+
+    line-height:
+        1.8;
+
+}
+
+
+/* =========================================================
+   RESULT PAGE
+========================================================= */
+
+.result-content {
+
+    max-width:
+        410px;
+
+}
+
+
+.result-heart {
+
+    width:
+        78px;
+
+    height:
+        78px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    margin:
+        0 auto 20px;
+
+    border-radius:
+        50%;
+
+    font-size:
+        35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,80,145,.18),
+            rgba(255,255,255,.04)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.13);
+
+    box-shadow:
+
+        0 0 45px
+        rgba(255,50,120,.15);
+
+}
+
+
+.result-message {
+
+    max-width:
+        350px;
+
+    margin:
+        0 auto 28px;
+
+    color:
+        rgba(255,255,255,.65);
+
+    font-size:
+        14px;
+
+    line-height:
+        1.85;
+
+}
+
+
+/* =========================================================
+   BIRTHDAY PAGE
+========================================================= */
+
+.birthday-content {
+
+    max-width:
+        430px;
+
+    padding-bottom:
+        35px;
+
+}
+
+
+.birthday-heart {
+
+    width:
+        72px;
+
+    height:
+        72px;
+
+    margin:
+        5px auto 14px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        50%;
+
+    font-size:
+        33px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,75,135,.19),
+            rgba(255,255,255,.04)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.14);
+
+    box-shadow:
+
+        0 15px 40px
+        rgba(0,0,0,.30),
+
+        0 0 35px
+        rgba(255,50,120,.15);
+
+}
+
+
+.birthday-title {
+
+    margin-bottom:
+        9px;
+
+}
+
+
+.birthday-subtitle {
+
+    color:
+        rgba(255,255,255,.65);
+
+    font-size:
+        14px;
+
+    margin-bottom:
+        23px;
+
+}
+
+
+/* =========================================================
+   PREMIUM VIDEO CARD
+========================================================= */
+
+.birthday-video-card {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    padding:
+        8px;
+
+    margin:
+        0 auto 22px;
+
+    border-radius:
+        27px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.17),
+            rgba(255,255,255,.035)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.16);
+
+    box-shadow:
+
+        0 30px 75px
+        rgba(0,0,0,.48),
+
+        0 0 50px
+        rgba(255,55,120,.14),
+
+        inset 0 1px 0
+        rgba(255,255,255,.13);
+
+    backdrop-filter:
+        blur(22px);
+
+    -webkit-backdrop-filter:
+        blur(22px);
+
+    transform:
+        perspective(1200px)
+        rotateX(0deg)
+        rotateY(0deg)
+        scale(1);
+
+    transform-style:
+        preserve-3d;
+
+    transition:
+        transform .25s ease,
+        box-shadow .35s ease;
+
+    will-change:
+        transform;
+
+}
+
+
+.birthday-video-card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        -2px;
+
+    border-radius:
+        29px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,80,145,.38),
+            transparent 35%,
+            transparent 65%,
+            rgba(165,80,255,.22)
+        );
+
+    opacity:
+        .52;
+
+    filter:
+        blur(9px);
+
+    z-index:
+        -1;
+
+}
+
+
+/* =========================================================
+   VIDEO INNER
+========================================================= */
+
+.video-inner {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        20px;
+
+    background:
+        #070509;
+
+}
+
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+.birthday-video {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    max-height:
+        570px;
+
+    min-height:
+        400px;
+
+    object-fit:
+        contain;
+
+    background:
+        #070509;
+
+}
+
+
+/* =========================================================
+   VIDEO OVERLAY
+========================================================= */
+
+.video-overlay {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(8,4,10,.08),
+            rgba(8,4,10,.42)
+        );
+
+    transition:
+        opacity .35s ease,
+        visibility .35s ease;
+
+}
+
+
+/* =========================================================
+   VIDEO PLAY BUTTON
+========================================================= */
+
+.video-play-button {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        11px;
+
+    min-width:
+        195px;
+
+    min-height:
+        120px;
+
+    padding:
+        17px 22px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.20);
+
+    border-radius:
+        22px;
+
+    color:
+        white;
+
+    font-family:
+        "DM Sans",
+        "Noto Sans Bengali",
+        sans-serif;
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+
+    background:
+        rgba(232,38,111,.84);
+
+    box-shadow:
+
+        0 18px 45px
+        rgba(0,0,0,.40),
+
+        0 0 35px
+        rgba(255,40,120,.28);
+
+    backdrop-filter:
+        blur(16px);
+
+    -webkit-backdrop-filter:
+        blur(16px);
+
+    cursor:
+        pointer;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.video-play-button:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.03);
+
+    box-shadow:
+
+        0 23px 50px
+        rgba(0,0,0,.44),
+
+        0 0 45px
+        rgba(255,40,120,.38);
+
+}
+
+
+.video-play-button:active {
+
+    transform:
+        scale(.96);
+
+}
+
+
+/* =========================================================
+   PLAY ICON
+========================================================= */
+
+.play-icon {
+
+    width:
+        54px;
+
+    height:
+        54px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding-left:
+        3px;
+
+    border-radius:
+        50%;
+
+    font-size:
+        19px;
+
+    background:
+        rgba(255,255,255,.15);
+
+    border:
+        1px solid
+        rgba(255,255,255,.22);
+
+}
+
+
+/* =========================================================
+   BIRTHDAY MESSAGE
+========================================================= */
+
+.birthday-message {
+
+    max-width:
+        350px;
+
+    margin:
+        0 auto;
+
+    color:
+        rgba(255,255,255,.68);
+
+    font-size:
+        13px;
+
+    line-height:
+        1.85;
+
+}
+
+
+.final-love {
+
+    margin-top:
+        10px;
+
+    color:
+        #f19abc;
+
+    font-size:
+        15px;
+
+    font-weight:
+        700;
+
+}
+
+
+/* =========================================================
+   MOBILE — iPHONE 12 PRO
+========================================================= */
+
+@media (max-width: 500px) {
+
+
+    .page {
+
+        padding:
+            24px 20px;
+
+    }
+
+
+    .content {
+
+        max-width:
+            390px;
+
+    }
+
+
+    .eyebrow {
+
+        font-size:
+            8.5px;
+
+        letter-spacing:
+            2.3px;
+
+        margin-bottom:
+            22px;
+
+    }
+
+
+    .heart-circle {
+
+        width:
+            74px;
+
+        height:
+            74px;
+
+        font-size:
+            28px;
+
+    }
+
+
+    .main-heart {
+
+        margin-bottom:
+            23px;
+
+    }
+
+
+    h1 {
+
+        font-size:
+            51px;
+
+    }
+
+
+    h2 {
+
+        font-size:
+            32px;
+
+    }
+
+
+    .description {
+
+        font-size:
+            13px;
+
+        line-height:
+            1.75;
+
+    }
+
+
+    .primary-btn {
+
+        max-width:
+            100%;
+
+        height:
+            57px;
+
+    }
+
+
+    .question-icon {
+
+        width:
+            64px;
+
+        height:
+            64px;
+
+        font-size:
+            30px;
+
+        margin-bottom:
+            21px;
+
+    }
+
+
+    .choice-btn {
+
+        min-height:
+            72px;
+
+    }
+
+
+    .choice-icon {
+
+        width:
+            49px;
+
+        height:
+            49px;
+
+    }
+
+
+    .answer-grid {
+
+        gap:
+            11px;
+
+    }
+
+
+    .answer-btn {
+
+        min-height:
+            130px;
+
+        padding:
+            18px 12px;
+
+        border-radius:
+            18px;
+
+    }
+
+
+    .answer-main {
+
+        font-size:
+            15px;
+
+    }
+
+
+    .memory-card {
+
+        padding:
+            7px;
+
+        border-radius:
+            24px;
+
+        margin-bottom:
+            19px;
+
+    }
+
+
+    .memory-image-wrapper {
+
+        border-radius:
+            18px;
+
+        aspect-ratio:
+            4 / 5;
+
+    }
+
+
+    .memory-text {
+
+        margin-bottom:
+            19px;
+
+    }
+
+
+    .memory-text h2 {
+
+        font-size:
+            28px;
+
+    }
+
+
+    .memory-text p {
+
+        font-size:
+            12.5px;
+
+    }
+
+
+    .result-heart {
+
+        width:
+            68px;
+
+        height:
+            68px;
+
+        font-size:
+            30px;
+
+    }
+
+
+    .birthday-content {
+
+        max-width:
+            380px;
+
+    }
+
+
+    .birthday-heart {
+
+        width:
+            62px;
+
+        height:
+            62px;
+
+        font-size:
+            29px;
+
+    }
+
+
+    .birthday-title {
+
+        font-size:
+            31px;
+
+    }
+
+
+    .birthday-subtitle {
+
+        font-size:
+            12.5px;
+
+        margin-bottom:
+            19px;
+
+    }
+
+
+    .birthday-video-card {
+
+        padding:
+            7px;
+
+        border-radius:
+            23px;
+
+    }
+
+
+    .video-inner {
+
+        border-radius:
+            17px;
+
+    }
+
+
+    .birthday-video {
+
+        min-height:
+            350px;
+
+        max-height:
+            520px;
+
+    }
+
+
+    .video-play-button {
+
+        min-width:
+            175px;
+
+        min-height:
+            105px;
+
+        font-size:
+            12px;
+
+    }
+
+
+    .play-icon {
+
+        width:
+            48px;
+
+        height:
+            48px;
+
+        font-size:
+            17px;
+
+    }
+
+}
+
+
+/* =========================================================
+   SHORT SCREEN
+========================================================= */
+
+@media (max-height: 750px) {
+
+
+    .page {
+
+        padding-top:
+            18px;
+
+        padding-bottom:
+            18px;
+
+    }
+
+
+    .eyebrow {
+
+        margin-bottom:
+            16px;
+
+    }
+
+
+    .heart-circle {
+
+        width:
+            62px;
+
+        height:
+            62px;
+
+    }
+
+
+    .main-heart {
+
+        margin-bottom:
+            16px;
+
+    }
+
+
+    h1 {
+
+        font-size:
+            43px;
+
+        margin-bottom:
+            16px;
+
+    }
+
+
+    h2 {
+
+        font-size:
+            28px;
+
+        margin-bottom:
+            12px;
+
+    }
+
+
+    .description {
+
+        margin-bottom:
+            19px;
+
+    }
+
+
+    .answer-btn {
+
+        min-height:
+            112px;
+
+    }
+
+
+    .memory-card {
+
+        max-width:
+            315px;
+
+        margin-bottom:
+            14px;
+
+    }
+
+
+    .memory-image-wrapper {
+
+        aspect-ratio:
+            4 / 4.7;
+
+    }
+
+
+    .memory-text h2 {
+
+        font-size:
+            25px;
+
+    }
+
+
+    .memory-text p {
+
+        font-size:
+            11.5px;
+
+    }
+
+
+    .birthday-video-card {
+
+        margin-bottom:
+            15px;
+
+    }
+
+
+    .birthday-video {
+
+        min-height:
+            285px;
+
+        max-height:
+            410px;
+
+    }
+
+
+    .birthday-message {
+
+        font-size:
+            11.5px;
+
+    }
+
+}/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+
+body {
+
+    font-family:
+        "DM Sans",
+        "Noto Sans Bengali",
+        sans-serif;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            145deg,
+            #090408 0%,
+            #170811 45%,
+            #080308 100%
+        );
+
+    overflow: hidden;
+
+    -webkit-font-smoothing: antialiased;
+
+}
+
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.background {
+
+    position: fixed;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    pointer-events: none;
+
+    z-index: 0;
+
+}
+
+
+.glow {
+
+    position: absolute;
+
+    width: 340px;
+
+    height: 340px;
+
+    border-radius: 50%;
+
+    filter: blur(110px);
+
+    opacity: .20;
+
+}
+
+
+.glow-1 {
+
+    top: -150px;
+
+    right: -130px;
+
+    background: #b21f60;
+
+}
+
+
+.glow-2 {
+
+    bottom: -150px;
+
+    left: -140px;
+
+    background: #791545;
+
+}
+
+
+.glow-3 {
+
+    top: 42%;
+
+    left: 45%;
+
+    width: 220px;
+
+    height: 220px;
+
+    background: #6e183f;
+
+    opacity: .08;
+
+}
+
+
+/* =========================================================
+   FLOATING HEARTS
+========================================================= */
+
+.floating-heart {
+
+    position: absolute;
+
+    color:
+        rgba(255, 117, 164, .15);
+
+    font-family: serif;
+
+    animation:
+        floatHeart 8s
+        infinite ease-in-out;
+
+}
+
+
+.heart-1 {
+
+    top: 12%;
+    left: 7%;
+
+    font-size: 23px;
+
+}
+
+
+.heart-2 {
+
+    top: 24%;
+    right: 9%;
+
+    font-size: 17px;
+
+    animation-delay: 2s;
+
+}
+
+
+.heart-3 {
+
+    bottom: 22%;
+    left: 8%;
+
+    font-size: 19px;
+
+    animation-delay: 4s;
+
+}
+
+
+.heart-4 {
+
+    bottom: 12%;
+    right: 10%;
+
+    font-size: 25px;
+
+    animation-delay: 1s;
+
+}
+
+
+.heart-5 {
+
+    top: 52%;
+    left: 3%;
+
+    font-size: 13px;
+
+    animation-delay: 3s;
+
+}
+
+
+.heart-6 {
+
+    top: 65%;
+    right: 4%;
+
+    font-size: 14px;
+
+    animation-delay: 5s;
+
+}
+
+
+@keyframes floatHeart {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-22px)
+            rotate(8deg);
+
+    }
+
+}
+
+
+/* =========================================================
+   APP
+========================================================= */
+
+#app {
+
+    position: relative;
+
+    z-index: 2;
+
+    width: 100%;
+
+    height: 100vh;
+
+}
+
+
+/* =========================================================
+   PAGE TRANSITION
+========================================================= */
+
+.page {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 30px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateY(25px)
+        scale(.975);
+
+    transition:
+        opacity .60s ease,
+        transform .60s ease,
+        visibility .60s ease;
+
+    overflow-y: auto;
+
+    scrollbar-width: none;
+
+}
+
+
+.page::-webkit-scrollbar {
+    display: none;
+}
+
+
+.page.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateY(0)
+        scale(1);
+
+}
+
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.content {
+
+    width: 100%;
+
+    max-width: 420px;
+
+    text-align: center;
+
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.eyebrow {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-bottom: 27px;
+
+    color:
+        rgba(255,255,255,.44);
+
+    font-size: 10px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+}
+
+
+.eyebrow span {
+
+    width: 22px;
+
+    height: 1px;
+
+    background:
+        rgba(255,255,255,.18);
+
+}
+
+
+/* =========================================================
+   MAIN HEART
+========================================================= */
+
+.main-heart {
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-bottom: 28px;
+
+}
+
+
+.heart-circle {
+
+    width: 84px;
+
+    height: 84px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-size: 32px;
+
+    color: #ffb8d0;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.14),
+            rgba(255,255,255,.035)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.13);
+
+    box-shadow:
+
+        0 0 50px
+        rgba(213,36,108,.27),
+
+        inset 0 1px 1px
+        rgba(255,255,255,.13);
+
+    animation:
+        heartBeat 2.2s
+        infinite ease-in-out;
+
+}
+
+
+@keyframes heartBeat {
+
+    0%,
+    100% {
+
+        transform:
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            scale(1.07);
+
+    }
+
+}
+
+
+/* =========================================================
+   HEADINGS
+========================================================= */
+
+h1,
+h2 {
+
+    font-family:
+        "Playfair Display",
+        "Noto Sans Bengali",
+        serif;
+
+}
+
+
+h1 {
+
+    font-size:
+        clamp(48px, 13vw, 68px);
+
+    line-height:
+        1.02;
+
+    font-weight:
+        600;
+
+    letter-spacing:
+        -2px;
+
+    margin-bottom:
+        23px;
+
+}
+
+
+h2 {
+
+    font-size:
+        clamp(31px, 8vw, 39px);
+
+    line-height:
+        1.30;
+
+    font-weight:
+        600;
+
+    margin-bottom:
+        17px;
+
+}
+
+
+h1 span,
+h2 span {
+
+    color:
+        #f3a3c4;
+
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.description {
+
+    color:
+        rgba(255,255,255,.61);
+
+    font-size:
+        14px;
+
+    line-height:
+        1.85;
+
+    margin-bottom:
+        30px;
+
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.primary-btn {
+
+    width: 100%;
+
+    max-width: 320px;
+
+    height: 58px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding:
+        0 8px 0 24px;
+
+    border: none;
+
+    border-radius:
+        100px;
+
+    color:
+        #270913;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #ffeaf2
+        );
+
+    font-family:
+        "DM Sans",
+        "Noto Sans Bengali",
+        sans-serif;
+
+    font-size:
+        14px;
+
+    font-weight:
+        700;
+
+    cursor:
+        pointer;
+
+    box-shadow:
+
+        0 17px 45px
+        rgba(0,0,0,.38),
+
+        0 0 25px
+        rgba(255,110,160,.08);
+
+    transition:
+        transform .28s ease,
+        box-shadow .28s ease;
+
+}
+
+
+.primary-btn:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+
+        0 23px 55px
+        rgba(0,0,0,.45),
+
+        0 0 35px
+        rgba(255,110,160,.14);
+
+}
+
+
+.primary-btn:active {
+
+    transform:
+        scale(.965);
+
+}
+
+
+.arrow {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    color: white;
+
+    background:
+        #68183a;
+
+    font-size: 20px;
+
+}
+
+
+/* =========================================================
+   SIGNATURE
+========================================================= */
+
+.signature {
+
+    margin-top: 27px;
+
+    color:
+        rgba(255,255,255,.29);
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.signature span {
+
+    color:
+        #e98bad;
+
+    margin-left: 5px;
+
+}
+
+
+/* =========================================================
+   QUESTION ICON
+========================================================= */
+
+.question-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin:
+        0 auto 25px;
+
+    border-radius: 50%;
+
+    color:
+        #f4aec9;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        33px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.09),
+            rgba(255,255,255,.025)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.12);
+
+    box-shadow:
+
+        0 0 38px
+        rgba(186,37,99,.18);
+
+}
+
+
+.love-question-icon {
+
+    color:
+        #ffabc9;
+
+}
+
+
+.money-question-icon {
+
+    color:
+        #f3c56d;
+
+}
+
+
+/* =========================================================
+   MAIN OPTIONS
+========================================================= */
+
+.options {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        13px;
+
+    width:
+        100%;
+
+}
+
+
+.choice-btn {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    min-height:
+        76px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        15px;
+
+    padding:
+        10px 14px;
+
+    color:
+        white;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.075),
+            rgba(255,255,255,.035)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.11);
+
+    border-radius:
+        20px;
+
+    cursor:
+        pointer;
+
+    text-align:
+        left;
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+    transition:
+        transform .3s ease,
+        background .3s ease,
+        border-color .3s ease,
+        box-shadow .3s ease;
+
+}
+
+
+.choice-btn:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.01);
+
+    background:
+        rgba(255,255,255,.10);
+
+    border-color:
+        rgba(255,175,205,.30);
+
+    box-shadow:
+        0 14px 35px
+        rgba(0,0,0,.25);
+
+}
+
+
+.choice-btn:active {
+
+    transform:
+        scale(.965);
+
+}
+
+
+.choice-icon {
+
+    width:
+        52px;
+
+    height:
+        52px;
+
+    flex-shrink:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        15px;
+
+    background:
+        rgba(255,100,155,.10);
+
+    font-size:
+        23px;
+
+}
+
+
+.choice-icon.money {
+
+    background:
+        rgba(255,190,70,.09);
+
+}
+
+
+.choice-text {
+
+    flex:
+        1;
+
+}
+
+
+.choice-text strong {
+
+    font-size:
+        16px;
+
+    font-weight:
+        600;
+
+}
+
+
+.choice-arrow {
+
+    color:
+        rgba(255,255,255,.35);
+
+    font-size:
+        20px;
+
+    padding-right:
+        4px;
+
+}
+
+
+.bottom-note {
+
+    margin-top:
+        24px;
+
+    color:
+        rgba(255,255,255,.25);
+
+    font-size:
+        11px;
+
+    letter-spacing:
+        1px;
+
+}
+
+
+/* =========================================================
+   ANSWER GRID
+========================================================= */
+
+.answer-grid {
+
+    width:
+        100%;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap:
+        13px;
+
+}
+
+
+.answer-btn {
+
+    position:
+        relative;
+
+    min-height:
+        142px;
+
+    padding:
+        20px 13px;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        flex-start;
+
+    justify-content:
+        flex-end;
+
+    border:
+        1px solid
+        rgba(255,255,255,.11);
+
+    border-radius:
+        20px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.07),
+            rgba(255,255,255,.025)
+        );
+
+    color:
+        white;
+
+    cursor:
+        pointer;
+
+    text-align:
+        left;
+
+    overflow:
+        hidden;
+
+    backdrop-filter:
+        blur(18px);
+
+    -webkit-backdrop-filter:
+        blur(18px);
+
+    transition:
+        transform .30s ease,
+        border-color .30s ease,
+        background .30s ease,
+        box-shadow .30s ease;
+
+}
+
+
+.answer-btn::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        linear-gradient(
+            130deg,
+            rgba(255,100,160,.08),
+            transparent 50%
+        );
+
+    opacity:
+        0;
+
+    transition:
+        opacity .3s ease;
+
+}
+
+
+.answer-btn:hover {
+
+    transform:
+        translateY(-5px);
+
+    border-color:
+        rgba(255,155,195,.28);
+
+    background:
+        rgba(255,255,255,.09);
+
+    box-shadow:
+        0 16px 35px
+        rgba(0,0,0,.30);
+
+}
+
+
+.answer-btn:hover::before {
+
+    opacity:
+        1;
+
+}
+
+
+.answer-btn:active {
+
+    transform:
+        scale(.96);
+
+}
+
+
+.answer-number {
+
+    position:
+        absolute;
+
+    top:
+        13px;
+
+    right:
+        13px;
+
+    color:
+        rgba(255,255,255,.27);
+
+    font-size:
+        10px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        1px;
+
+}
+
+
+.answer-main {
+
+    position:
+        relative;
+
+    z-index:
+        2;
+
+    font-size:
+        16px;
+
+    font-weight:
+        700;
+
+    line-height:
+        1.35;
+
+}
+
+
+.answer-arrow {
+
+    position:
+        absolute;
+
+    right:
+        13px;
+
+    bottom:
+        13px;
+
+    color:
+        rgba(255,255,255,.28);
+
+    font-size:
+        16px;
+
+}
+
+
+.special-choice {
+
+    border-color:
+        rgba(255,80,145,.30);
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,60,130,.11),
+            rgba(255,255,255,.035)
+        );
+
+}
+
+
+.special-choice .answer-main {
+
+    color:
+        #f18caf;
+
+}
+
+
+/* =========================================================
+   MONEY PAGE
+========================================================= */
+
+.money-heading {
+
+    margin-bottom:
+        10px;
+
+}
+
+
+.money-question-text {
+
+    color:
+        rgba(255,255,255,.65);
+
+    font-size:
+        15px;
+
+    line-height:
+        1.7;
+
+    margin-bottom:
+        27px;
+
+}
+
+
+/* =========================================================
+   MEMORY CONTENT
+========================================================= */
+
+.memory-content {
+
+    max-width:
+        410px;
+
+}
+
+
+/* =========================================================
+   PREMIUM 3D MEMORY CARD
+========================================================= */
+
+.memory-card {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    padding:
+        8px;
+
+    margin:
+        0 auto 24px;
+
+    border-radius:
+        27px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.17),
+            rgba(255,255,255,.035)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.16);
+
+    box-shadow:
+
+        0 30px 75px
+        rgba(0,0,0,.46),
+
+        0 0 50px
+        rgba(255,55,120,.12),
+
+        inset 0 1px 0
+        rgba(255,255,255,.12);
+
+    backdrop-filter:
+        blur(20px);
+
+    -webkit-backdrop-filter:
+        blur(20px);
+
+    transform:
+        perspective(1100px)
+        rotateX(0deg)
+        rotateY(0deg)
+        scale(1);
+
+    transform-style:
+        preserve-3d;
+
+    transition:
+        transform .25s ease,
+        box-shadow .3s ease;
+
+    will-change:
+        transform;
+
+}
+
+
+.memory-card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        -2px;
+
+    border-radius:
+        29px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,80,145,.36),
+            transparent 35%,
+            transparent 65%,
+            rgba(160,80,255,.20)
+        );
+
+    opacity:
+        .48;
+
+    filter:
+        blur(9px);
+
+    z-index:
+        -1;
+
+}
+
+
+/* =========================================================
+   MEMORY IMAGE
+========================================================= */
+
+.memory-image-wrapper {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    aspect-ratio:
+        4 / 5;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        20px;
+
+    background:
+        #120c13;
+
+}
+
+
+.memory-image {
+
+    width:
+        100%;
+
+    height:
+        100%;
+
+    display:
+        block;
+
+    object-fit:
+        cover;
+
+    object-position:
+        center;
+
+    transition:
+        transform .7s
+        cubic-bezier(.22,1,.36,1);
+
+}
+
+
+.memory-card:hover .memory-image {
+
+    transform:
+        scale(1.045);
+
+}
+
+
+/* =========================================================
+   IMAGE SHINE
+========================================================= */
+
+.memory-image-wrapper::after {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    background:
+        linear-gradient(
+            115deg,
+            transparent 20%,
+            rgba(255,255,255,.12) 45%,
+            transparent 70%
+        );
+
+    transform:
+        translateX(-120%);
+
+    transition:
+        transform .9s ease;
+
+    pointer-events:
+        none;
+
+}
+
+
+.memory-card:hover
+.memory-image-wrapper::after {
+
+    transform:
+        translateX(120%);
+
+}
+
+
+/* =========================================================
+   MEMORY TEXT
+========================================================= */
+
+.memory-text {
+
+    margin-bottom:
+        23px;
+
+}
+
+
+.memory-text h2 {
+
+    margin-bottom:
+        10px;
+
+}
+
+
+.memory-text p {
+
+    max-width:
+        350px;
+
+    margin:
+        0 auto;
+
+    color:
+        rgba(255,255,255,.62);
+
+    font-size:
+        14px;
+
+    line-height:
+        1.8;
+
+}
+
+
+/* =========================================================
+   RESULT PAGE
+========================================================= */
+
+.result-content {
+
+    max-width:
+        410px;
+
+}
+
+
+.result-heart {
+
+    width:
+        78px;
+
+    height:
+        78px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    margin:
+        0 auto 20px;
+
+    border-radius:
+        50%;
+
+    font-size:
+        35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,80,145,.18),
+            rgba(255,255,255,.04)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.13);
+
+    box-shadow:
+
+        0 0 45px
+        rgba(255,50,120,.15);
+
+}
+
+
+.result-message {
+
+    max-width:
+        350px;
+
+    margin:
+        0 auto 28px;
+
+    color:
+        rgba(255,255,255,.65);
+
+    font-size:
+        14px;
+
+    line-height:
+        1.85;
+
+}
+
+
+/* =========================================================
+   BIRTHDAY PAGE
+========================================================= */
+
+.birthday-content {
+
+    max-width:
+        430px;
+
+    padding-bottom:
+        35px;
+
+}
+
+
+.birthday-heart {
+
+    width:
+        72px;
+
+    height:
+        72px;
+
+    margin:
+        5px auto 14px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border-radius:
+        50%;
+
+    font-size:
+        33px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,75,135,.19),
+            rgba(255,255,255,.04)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.14);
+
+    box-shadow:
+
+        0 15px 40px
+        rgba(0,0,0,.30),
+
+        0 0 35px
+        rgba(255,50,120,.15);
+
+}
+
+
+.birthday-title {
+
+    margin-bottom:
+        9px;
+
+}
+
+
+.birthday-subtitle {
+
+    color:
+        rgba(255,255,255,.65);
+
+    font-size:
+        14px;
+
+    margin-bottom:
+        23px;
+
+}
+
+
+/* =========================================================
+   PREMIUM VIDEO CARD
+========================================================= */
+
+.birthday-video-card {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    padding:
+        8px;
+
+    margin:
+        0 auto 22px;
+
+    border-radius:
+        27px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.17),
+            rgba(255,255,255,.035)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.16);
+
+    box-shadow:
+
+        0 30px 75px
+        rgba(0,0,0,.48),
+
+        0 0 50px
+        rgba(255,55,120,.14),
+
+        inset 0 1px 0
+        rgba(255,255,255,.13);
+
+    backdrop-filter:
+        blur(22px);
+
+    -webkit-backdrop-filter:
+        blur(22px);
+
+    transform:
+        perspective(1200px)
+        rotateX(0deg)
+        rotateY(0deg)
+        scale(1);
+
+    transform-style:
+        preserve-3d;
+
+    transition:
+        transform .25s ease,
+        box-shadow .35s ease;
+
+    will-change:
+        transform;
+
+}
+
+
+.birthday-video-card::before {
+
+    content:
+        "";
+
+    position:
+        absolute;
+
+    inset:
+        -2px;
+
+    border-radius:
+        29px;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,80,145,.38),
+            transparent 35%,
+            transparent 65%,
+            rgba(165,80,255,.22)
+        );
+
+    opacity:
+        .52;
+
+    filter:
+        blur(9px);
+
+    z-index:
+        -1;
+
+}
+
+
+/* =========================================================
+   VIDEO INNER
+========================================================= */
+
+.video-inner {
+
+    position:
+        relative;
+
+    width:
+        100%;
+
+    overflow:
+        hidden;
+
+    border-radius:
+        20px;
+
+    background:
+        #070509;
+
+}
+
+
+/* =========================================================
+   VIDEO
+========================================================= */
+
+.birthday-video {
+
+    display:
+        block;
+
+    width:
+        100%;
+
+    max-height:
+        570px;
+
+    min-height:
+        400px;
+
+    object-fit:
+        contain;
+
+    background:
+        #070509;
+
+}
+
+
+/* =========================================================
+   VIDEO OVERLAY
+========================================================= */
+
+.video-overlay {
+
+    position:
+        absolute;
+
+    inset:
+        0;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(8,4,10,.08),
+            rgba(8,4,10,.42)
+        );
+
+    transition:
+        opacity .35s ease,
+        visibility .35s ease;
+
+}
+
+
+/* =========================================================
+   VIDEO PLAY BUTTON
+========================================================= */
+
+.video-play-button {
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    gap:
+        11px;
+
+    min-width:
+        195px;
+
+    min-height:
+        120px;
+
+    padding:
+        17px 22px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.20);
+
+    border-radius:
+        22px;
+
+    color:
+        white;
+
+    font-family:
+        "DM Sans",
+        "Noto Sans Bengali",
+        sans-serif;
+
+    font-size:
+        13px;
+
+    font-weight:
+        700;
+
+    background:
+        rgba(232,38,111,.84);
+
+    box-shadow:
+
+        0 18px 45px
+        rgba(0,0,0,.40),
+
+        0 0 35px
+        rgba(255,40,120,.28);
+
+    backdrop-filter:
+        blur(16px);
+
+    -webkit-backdrop-filter:
+        blur(16px);
+
+    cursor:
+        pointer;
+
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+.video-play-button:hover {
+
+    transform:
+        translateY(-4px)
+        scale(1.03);
+
+    box-shadow:
+
+        0 23px 50px
+        rgba(0,0,0,.44),
+
+        0 0 45px
+        rgba(255,40,120,.38);
+
+}
+
+
+.video-play-button:active {
+
+    transform:
+        scale(.96);
+
+}
+
+
+/* =========================================================
+   PLAY ICON
+========================================================= */
+
+.play-icon {
+
+    width:
+        54px;
+
+    height:
+        54px;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    padding-left:
+        3px;
+
+    border-radius:
+        50%;
+
+    font-size:
+        19px;
+
+    background:
+        rgba(255,255,255,.15);
+
+    border:
+        1px solid
+        rgba(255,255,255,.22);
+
+}
+
+
+/* =========================================================
+   BIRTHDAY MESSAGE
+========================================================= */
+
+.birthday-message {
+
+    max-width:
+        350px;
+
+    margin:
+        0 auto;
+
+    color:
+        rgba(255,255,255,.68);
+
+    font-size:
+        13px;
+
+    line-height:
+        1.85;
+
+}
+
+
+.final-love {
+
+    margin-top:
+        10px;
+
+    color:
+        #f19abc;
+
+    font-size:
+        15px;
+
+    font-weight:
+        700;
+
+}
+
+
+/* =========================================================
+   MOBILE — iPHONE 12 PRO
+========================================================= */
+
+@media (max-width: 500px) {
+
+
+    .page {
+
+        padding:
+            24px 20px;
+
+    }
+
+
+    .content {
+
+        max-width:
+            390px;
+
+    }
+
+
+    .eyebrow {
+
+        font-size:
+            8.5px;
+
+        letter-spacing:
+            2.3px;
+
+        margin-bottom:
+            22px;
+
+    }
+
+
+    .heart-circle {
+
+        width:
+            74px;
+
+        height:
+            74px;
+
+        font-size:
+            28px;
+
+    }
+
+
+    .main-heart {
+
+        margin-bottom:
+            23px;
+
+    }
+
+
+    h1 {
+
+        font-size:
+            51px;
+
+    }
+
+
+    h2 {
+
+        font-size:
+            32px;
+
+    }
+
+
+    .description {
+
+        font-size:
+            13px;
+
+        line-height:
+            1.75;
+
+    }
+
+
+    .primary-btn {
+
+        max-width:
+            100%;
+
+        height:
+            57px;
+
+    }
+
+
+    .question-icon {
+
+        width:
+            64px;
+
+        height:
+            64px;
+
+        font-size:
+            30px;
+
+        margin-bottom:
+            21px;
+
+    }
+
+
+    .choice-btn {
+
+        min-height:
+            72px;
+
+    }
+
+
+    .choice-icon {
+
+        width:
+            49px;
+
+        height:
+            49px;
+
+    }
+
+
+    .answer-grid {
+
+        gap:
+            11px;
+
+    }
+
+
+    .answer-btn {
+
+        min-height:
+            130px;
+
+        padding:
+            18px 12px;
+
+        border-radius:
+            18px;
+
+    }
+
+
+    .answer-main {
+
+        font-size:
+            15px;
+
+    }
+
+
+    .memory-card {
+
+        padding:
+            7px;
+
+        border-radius:
+            24px;
+
+        margin-bottom:
+            19px;
+
+    }
+
+
+    .memory-image-wrapper {
+
+        border-radius:
+            18px;
+
+        aspect-ratio:
+            4 / 5;
+
+    }
+
+
+    .memory-text {
+
+        margin-bottom:
+            19px;
+
+    }
+
+
+    .memory-text h2 {
+
+        font-size:
+            28px;
+
+    }
+
+
+    .memory-text p {
+
+        font-size:
+            12.5px;
+
+    }
+
+
+    .result-heart {
+
+        width:
+            68px;
+
+        height:
+            68px;
+
+        font-size:
+            30px;
+
+    }
+
+
+    .birthday-content {
+
+        max-width:
+            380px;
+
+    }
+
+
+    .birthday-heart {
+
+        width:
+            62px;
+
+        height:
+            62px;
+
+        font-size:
+            29px;
+
+    }
+
+
+    .birthday-title {
+
+        font-size:
+            31px;
+
+    }
+
+
+    .birthday-subtitle {
+
+        font-size:
+            12.5px;
+
+        margin-bottom:
+            19px;
+
+    }
+
+
+    .birthday-video-card {
+
+        padding:
+            7px;
+
+        border-radius:
+            23px;
+
+    }
+
+
+    .video-inner {
+
+        border-radius:
+            17px;
+
+    }
+
+
+    .birthday-video {
+
+        min-height:
+            350px;
+
+        max-height:
+            520px;
+
+    }
+
+
+    .video-play-button {
+
+        min-width:
+            175px;
+
+        min-height:
+            105px;
+
+        font-size:
+            12px;
+
+    }
+
+
+    .play-icon {
+
+        width:
+            48px;
+
+        height:
+            48px;
+
+        font-size:
+            17px;
+
+    }
+
+}
+
+
+/* =========================================================
+   SHORT SCREEN
+========================================================= */
+
+@media (max-height: 750px) {
+
+
+    .page {
+
+        padding-top:
+            18px;
+
+        padding-bottom:
+            18px;
+
+    }
+
+
+    .eyebrow {
+
+        margin-bottom:
+            16px;
+
+    }
+
+
+    .heart-circle {
+
+        width:
+            62px;
+
+        height:
+            62px;
+
+    }
+
+
+    .main-heart {
+
+        margin-bottom:
+            16px;
+
+    }
+
+
+    h1 {
+
+        font-size:
+            43px;
+
+        margin-bottom:
+            16px;
+
+    }
+
+
+    h2 {
+
+        font-size:
+            28px;
+
+        margin-bottom:
+            12px;
+
+    }
+
+
+    .description {
+
+        margin-bottom:
+            19px;
+
+    }
+
+
+    .answer-btn {
+
+        min-height:
+            112px;
+
+    }
+
+
+    .memory-card {
+
+        max-width:
+            315px;
+
+        margin-bottom:
+            14px;
+
+    }
+
+
+    .memory-image-wrapper {
+
+        aspect-ratio:
+            4 / 4.7;
+
+    }
+
+
+    .memory-text h2 {
+
+        font-size:
+            25px;
+
+    }
+
+
+    .memory-text p {
+
+        font-size:
+            11.5px;
+
+    }
+
+
+    .birthday-video-card {
+
+        margin-bottom:
+            15px;
+
+    }
+
+
+    .birthday-video {
+
+        min-height:
+            285px;
+
+        max-height:
+            410px;
+
+    }
+
+
+    .birthday-message {
+
+        font-size:
+            11.5px;
+
+    }
+
+}

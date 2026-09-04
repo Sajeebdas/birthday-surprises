@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>Something For You ❤️</title>
+
+
+    <!-- =====================================================
+         GOOGLE FONTS
+    ====================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+Bengali:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap"
+        rel="stylesheet">
+
+
+    <!-- =====================================================
+         CSS
+    ====================================================== -->
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         PREMIUM BACKGROUND
+    ====================================================== -->
+
+    <div class="background">
+
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="glow glow-3"></div>
+
+
+        <span class="floating-heart heart-1">♡</span>
+        <span class="floating-heart heart-2">♡</span>
+        <span class="floating-heart heart-3">♡</span>
+        <span class="floating-heart heart-4">♡</span>
+        <span class="floating-heart heart-5">♡</span>
+        <span class="floating-heart heart-6">♡</span>
+
+    </div>
+
+
+
+    <!-- =====================================================
+         MAIN APP
+    ====================================================== -->
+
+    <main id="app">
+
+
+        <!-- =================================================
+             PAGE 1 — WELCOME
+        ================================================== -->
+
+        <section
+            class="page active"
+            id="page1">
+
+            <div class="content">
+
+
+                <div class="eyebrow">
+
+                    <span></span>
+
+                    A LITTLE SURPRISE
+
+                    <span></span>
+
+                </div>
+
+
+                <div class="main-heart">
+
+                    <div class="heart-circle">
+                        ♥
+                    </div>
+
+                </div>
+
+
+                <h1>
+
+                 আমার
+
+                    <br>
+
+                    <span>লক্ষি পাখি</span>
+                    ❤️
+
+                </h1>
+
+
+                <button
+                    class="primary-btn"
+                    onclick="nextPage()">
+
+                    <span>
+                        এইটা ধইরা টান মারো
+                    </span>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PAGE 2 — MAIN QUESTION
+        ================================================== -->
+
+        <section
+            class="page"
+            id="page2">
+
+            <div class="content">
+
+
+                <div class="eyebrow">
+
+                    <span></span>
+
+                    ONE LITTLE QUESTION
+
+                    <span></span>
+
+                </div>
+
+
+                <div class="question-icon">
+                    ?
+                </div>
+
+
+                <h2>
+
+                    তুমি আমার কাছে
+
+                    <br>
+
+                    <span>কী চাও?</span>
+                    ❤️
+
+                </h2>
+
+
+                <p class="description">
+
+                    খুব ভালো করে ভেবে answer দাও... 😌
+
+                </p>
+
+
+
+                <!-- OPTIONS -->
+
+                <div class="options">
+
+
+                    <!-- LOVE -->
+
+                    <button
+                        class="choice-btn love-choice"
+                        onclick="chooseLove()">
+
+
+                        <div class="choice-icon">
+                            ❤️
+                        </div>
+
+
+                        <div class="choice-text">
+
+                            <strong>
+                                ভালোবাসা
+                            </strong>
+
+                        </div>
+
+
+                        <div class="choice-arrow">
+                            →
+                        </div>
+
+
+                    </button>
+
+
+
+                    <!-- MONEY -->
+
+                    <button
+                        class="choice-btn money-choice"
+                        onclick="chooseMoney()">
+
+
+                        <div class="choice-icon money">
+                            💰
+                        </div>
+
+
+                        <div class="choice-text">
+
+                            <strong>
+                                টাকা-পয়সা
+                            </strong>
+
+                        </div>
+
+
+                        <div class="choice-arrow">
+                            →
+                        </div>
+
+
+                    </button>
+
+
+                </div>
+
+
+                <p class="bottom-note">
+                    Choose wisely, my love ♡
+                </p>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PAGE 3 — LOVE QUESTION
+        ================================================== -->
+
+        <section
+            class="page"
+            id="lovePage">
+
+            <div class="content">
+
+
+                <div class="eyebrow">
+
+                    <span></span>
+
+                    ONE MORE QUESTION
+
+                    <span></span>
+
+                </div>
+
+
+                <div class="question-icon love-question-icon">
+                    ❤️
+                </div>
+
+
+                <h2>
+
+                    কতটুকু
+
+                    <br>
+
+                    <span>ভালোবাসা</span>
+                    চাও?
+
+                </h2>
+
+
+                <p class="description">
+
+                    একটা বেছে নাও... ❤️
+
+                </p>
+
+
+
+                <!-- LOVE OPTIONS -->
+
+                <div class="answer-grid">
+
+
+                    <!-- 01 -->
+
+                    <button
+                        class="answer-btn"
+                        onclick="loveAnswer(1)">
+
+                        <span class="answer-number">
+                            01
+                        </span>
+
+                        <span class="answer-main">
+                            1.1 KG
+                        </span>
+
+                        <span class="answer-arrow">
+                            →
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- 02 -->
+
+                    <button
+                        class="answer-btn"
+                        onclick="loveAnswer(2)">
+
+                        <span class="answer-number">
+                            02
+                        </span>
+
+                        <span class="answer-main">
+                            2.2 KG
+                        </span>
+
+                        <span class="answer-arrow">
+                            →
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- 03 -->
+
+                    <button
+                        class="answer-btn"
+                        onclick="loveAnswer(3)">
+
+                        <span class="answer-number">
+                            03
+                        </span>
+
+                        <span class="answer-main">
+                            100 GRAM
+                        </span>
+
+                        <span class="answer-arrow">
+                            →
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- 04 -->
+
+                    <button
+                        class="answer-btn special-choice"
+                        onclick="loveAnswer(4)">
+
+                        <span class="answer-number">
+                            04
+                        </span>
+
+                        <span class="answer-main">
+                            আজীবনের জন্য ❤️
+                        </span>
+
+                        <span class="answer-arrow">
+                            →
+                        </span>
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PAGE 4 — MONEY QUESTION
+        ================================================== -->
+
+        <section
+            class="page"
+            id="moneyPage">
+
+            <div class="content">
+
+
+                <div class="eyebrow">
+
+                    <span></span>
+
+                    SERIOUS QUESTION
+
+                    <span></span>
+
+                </div>
+
+
+                <div class="question-icon money-question-icon">
+                    💰
+                </div>
+
+
+                <h2 class="money-heading">
+
+                    আমার মতো
+
+                    <br>
+
+                    <span>পকিন্নির</span> কাছে
+
+                    <br>
+
+                    টাকা-পয়সা চেয়ে
+
+                </h2>
+
+
+                <p class="money-question-text">
+
+                    নিজেকে কী প্রমাণ করতেছো? 😭
+
+                </p>
+
+
+
+                <!-- MONEY OPTIONS -->
+
+                <div class="answer-grid money-grid">
+
+
+                    <!-- 01 -->
+
+                    <button
+                        class="answer-btn"
+                        onclick="moneyAnswer(1)">
+
+                        <span class="answer-number">
+                            01
+                        </span>
+
+                        <span class="answer-main">
+                            🫏 গাধা
+                        </span>
+
+                        <span class="answer-arrow">
+                            →
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- 02 -->
+
+                    <button
+                        class="answer-btn"
+                        onclick="moneyAnswer(2)">
+
+                        <span class="answer-number">
+                            02
+                        </span>
+
+                        <span class="answer-main">
+                            🤪 পাগল
+                        </span>
+
+                        <span class="answer-arrow">
+                            →
+                        </span>
+
+                    </button>
+
+
+
+                    <!-- 03 -->
+
+                    <button
+                        class="answer-btn special-choice"
+                        onclick="moneyAnswer(3)">
+
+                        <span class="answer-number">
+                            03
+                        </span>
+
+                        <span class="answer-main">
+                            🧠 বুদ্ধিমতী
+                        </span>
+
+                        <span class="answer-arrow">
+                            →
+                        </span>
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PAGE 5 — FIRST MEMORY
+             IMAGE: age.jpeg
+        ================================================== -->
+
+        <section
+            class="page"
+            id="memoryPage1">
+
+            <div class="content memory-content">
+
+
+                <div class="eyebrow">
+
+                    <span></span>
+
+                    OUR FIRST MEMORY ❤️
+
+                    <span></span>
+
+                </div>
+
+
+                <!-- 3D IMAGE CARD -->
+
+                <div
+                    class="memory-card"
+                    id="memoryCard1">
+
+
+                    <div class="memory-image-wrapper">
+
+                        <img
+                            src="assets/images/age.jpeg"
+                            alt="Our first memory"
+                            class="memory-image">
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- TEXT -->
+
+                <div class="memory-text">
+
+
+                    <h2>
+
+                        এই ছবির কথা
+                        <span>মনে আছে?</span>
+                        ❤️
+
+                    </h2>
+
+
+                    <p>
+
+                        তোমার-আমার প্রথম দেখা,
+                        প্রথম কাছে আসা...
+
+                    </p>
+
+
+                </div>
+
+
+
+                <!-- BUTTON -->
+
+                <button
+                    class="primary-btn"
+                    onclick="showMemoryPage2()">
+
+                    <span>
+                        Next Memory
+                    </span>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PAGE 6 — SECOND MEMORY
+             IMAGE: pore.jpeg
+        ================================================== -->
+
+        <section
+            class="page"
+            id="memoryPage2">
+
+            <div class="content memory-content">
+
+
+                <div class="eyebrow">
+
+                    <span></span>
+
+                    OUR JOURNEY ❤️
+
+                    <span></span>
+
+                </div>
+
+
+                <!-- 3D IMAGE CARD -->
+
+                <div
+                    class="memory-card"
+                    id="memoryCard2">
+
+
+                    <div class="memory-image-wrapper">
+
+                        <img
+                            src="assets/images/pore.jpeg"
+                            alt="Our journey"
+                            class="memory-image">
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- TEXT -->
+
+                <div class="memory-text">
+
+
+                    <h2>
+
+                        প্রায়
+                        <span>৬ বছর</span>... ❤️
+
+                    </h2>
+
+
+                    <p>
+
+                        চলতে চলতে আজ প্রায় ৬ বছরের মতো
+                        পথ চলা হয়ে গেছে...
+
+                    </p>
+
+
+                </div>
+
+
+
+                <!-- BUTTON -->
+
+                <button
+                    class="primary-btn"
+                    onclick="showMemoryPage3()">
+
+                    <span>
+                        Continue
+                    </span>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PAGE 7 — TUMI MEMORY
+             IMAGE: Tumi.JPG
+        ================================================== -->
+
+        <section
+            class="page"
+            id="memoryPage3">
+
+            <div class="content memory-content">
+
+
+                <div class="eyebrow">
+
+                    <span></span>
+
+                    YOU ARE MY GREATEST GIFT ❤️
+
+                    <span></span>
+
+                </div>
+
+
+                <!-- 3D IMAGE CARD -->
+
+                <div
+                    class="memory-card"
+                    id="memoryCard3">
+
+
+                    <div class="memory-image-wrapper">
+
+                        <img
+                            src="assets/images/Tumi.JPG"
+                            alt="Tumi"
+                            class="memory-image">
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- EMOTIONAL TEXT -->
+
+                <div class="memory-text">
+
+
+                    <h2>
+
+                        তুমি আমার জীবনের
+
+                        <br>
+
+                        <span>
+                            সব থেকে বড় একটা পাওয়া
+                        </span>
+
+                        ❤️
+
+                    </h2>
+
+
+                    <p>
+
+                        আমি তোমাকে আজীবন
+                        আমার করে রাখতে চাই। ❤️
+
+                    </p>
+
+
+                </div>
+
+
+
+                <!-- BUTTON -->
+
+                <button
+                    class="primary-btn"
+                    onclick="showFinalPage()">
+
+                    <span>
+                        Continue
+                    </span>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PAGE 8 — FINAL MESSAGE
+        ================================================== -->
+
+        <section
+            class="page"
+            id="finalPage">
+
+            <div class="content result-content">
+
+
+                <div class="result-heart">
+                    💖
+                </div>
+
+
+                <div class="eyebrow">
+
+                    <span></span>
+
+                    ONE LAST THING
+
+                    <span></span>
+
+                </div>
+
+
+                <h2>
+
+                    তোমার জন্য
+
+                    <br>
+
+                    <span>
+                        আরও একটা surprise
+                    </span>
+
+                    <br>
+
+                    আছে... 🥺
+
+                </h2>
+
+
+                <p class="result-message">
+
+                    এতদূর আসার জন্য ধন্যবাদ।
+                    <br>
+                    কিন্তু আসল surprise এখনো বাকি। ❤️
+
+                </p>
+
+
+                <button
+                    class="primary-btn"
+                    onclick="showBirthdayPage()">
+
+                    <span>
+                        Show My Surprise
+                    </span>
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </button>
+
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PAGE 9 — BIRTHDAY VIDEO
+             VIDEO: Bday.mp4
+        ================================================== -->
+
+        <section
+            class="page"
+            id="birthdayPage">
+
+            <div class="content birthday-content">
+
+
+                <!-- TOP LABEL -->
+
+                <div class="eyebrow">
+
+                    <span></span>
+
+                    HAPPY BIRTHDAY ❤️
+
+                    <span></span>
+
+                </div>
+
+
+
+                <!-- BIRTHDAY ICON -->
+
+                <div class="birthday-heart">
+                    🎂
+                </div>
+
+
+
+                <!-- TITLE -->
+
+                <h1 class="birthday-title">
+
+                    Happy Birthday
+
+                    <br>
+
+                    <span>
+                        My Love
+                    </span>
+
+                    ❤️
+
+                </h1>
+
+
+                <p class="birthday-subtitle">
+
+                    আজকের দিনটা শুধু তোমার জন্য... 🥺❤️
+
+                </p>
+
+
+
+                <!-- =================================================
+                     PREMIUM 3D VIDEO CARD
+                ================================================== -->
+
+                <div
+                    class="birthday-video-card"
+                    id="birthdayVideoCard">
+
+
+                    <div class="video-inner">
+
+
+                        <video
+                            id="birthdayVideo"
+                            class="birthday-video"
+                            playsinline
+                            preload="metadata"
+                            controls>
+
+                            <source
+                                src="assets/video/Bday.mp4"
+                                type="video/mp4">
+
+                            তোমার browser video support করে না।
+
+                        </video>
+
+
+
+                        <!-- PLAY OVERLAY -->
+
+                        <div
+                            class="video-overlay"
+                            id="videoOverlay">
+
+
+                            <button
+                                class="video-play-button"
+                                onclick="playBirthdayVideo()">
+
+
+                                <span class="play-icon">
+                                    ▶
+                                </span>
+
+
+                                <span>
+                                    Play My Birthday Video
+                                </span>
+
+
+                            </button>
+
+
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+                <!-- FINAL MESSAGE -->
+
+                <div class="birthday-message">
+
+
+                    <p>
+
+                        তোমার হাসি,
+                        তোমার presence,
+                        আর তোমাকে পাওয়াটা—
+                        আমার জীবনের সবচেয়ে সুন্দর
+                        ব্যাপারগুলোর একটা। ❤️
+
+                    </p>
+
+
+                    <div class="final-love">
+
+                        Always & Forever ❤️
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
